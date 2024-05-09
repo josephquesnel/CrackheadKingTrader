@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="DrugBase">
+    <defName>CKT_Blue_Wide_Cigarettes</defName>
+    <label>blue wide cigarettes</label>
+    <description>Tobacco leaves treated and rolled into a delightful toasted cylinder. Packaging shows a camel and smells a bit musty. Tobacco mildly improves mood, suppresses appetite and improves work speed but is very addictive in the long term.</description>
+    <descriptionHyperlinks>
+      <HediffDef>CKT_TobaccoHigh</HediffDef>
+      <HediffDef>CKT_TobaccoAddiction</HediffDef>
+      <HediffDef>Carcinoma</HediffDef>
+      <HediffDef>Asthma</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Crackhead_King_Trader/Camel_Wides</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1</drawSize>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>450</WorkToMake>
+      <MarketValue>11</MarketValue>
+      <Mass>0.05</Mass>
+      <DeteriorationRate>3</DeteriorationRate>
+      <Flammability>1.3</Flammability>
+    </statBases>
+    <techLevel>Neolithic</techLevel>
+    <ingestible>
+	  <foodType>Plant, Processed</foodType>
+      <joyKind>Chemical</joyKind>
+      <joy>0.40</joy>
+	  <drugCategory>Social</drugCategory>
+      <baseIngestTicks>620</baseIngestTicks>
+      <ingestSound>Ingest_Smoke</ingestSound>
+      <ingestEffect>Smoke_Joint</ingestEffect>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.27,0,0.08)</offset>
+          <behind>true</behind>
+        </northDefault>
+        <east>
+          <offset>(0.45,0,0.08)</offset>
+        </east>
+        <south>
+          <offset>(0.27,0,0.08)</offset>
+        </south>
+        <west>
+          <offset>(-0.50,0,0.08)</offset>
+          <flip>true</flip>
+        </west>
+      </ingestHoldOffsetStanding>
+      <ingestCommandString>Smoke {0}</ingestCommandString>
+      <ingestReportString>Smoking {0}.</ingestReportString>
+      <useEatingSpeedStat>false</useEatingSpeedStat>
+	  <chairSearchRadius>4</chairSearchRadius>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>CKT_TobaccoHigh</hediffDef>
+          <severity>0.3</severity>
+          <toleranceChemical>CKT_Tobacco</toleranceChemical>
+        </li>
+        <li Class="IngestionOutcomeDoer_OffsetNeed">
+          <need>Rest</need>
+          <offset>0.05</offset>
+        </li>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>CKT_TobaccoTolerance</hediffDef>
+          <toleranceChemical>CKT_Tobacco</toleranceChemical>
+          <severity>0.015</severity>
+          <divideByBodySize>true</divideByBodySize>
+          <multiplyByGeneToleranceFactors>true</multiplyByGeneToleranceFactors>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <chemical>CKT_Tobacco</chemical>
+        <addictiveness>0.12</addictiveness>
+		<existingAddictionSeverityOffset>0.06</existingAddictionSeverityOffset>
+        <needLevelOffset>0.9</needLevelOffset>
+		<isCombatEnhancingDrug>true</isCombatEnhancingDrug>
+		<minToleranceToAddict>0.6</minToleranceToAddict>
+        <listOrder>412</listOrder>
+      </li>
+    </comps>
+    <allowedArchonexusCount>50</allowedArchonexusCount>
+  </ThingDef>
+  
+  <ThingDef ParentName="DrugBase">
+    <defName>CKT_Bagged_Cigarettes</defName>
+    <label>bagged cigarettes</label>
+    <description>Tobacco leaves treated and rolled into a delightful toasted cylinder. Slightly bent small, misshapen and packaged in a plastic bag smudged by use. Less joy than the regularily packaged item but hits the spot when you are desperate. Tobacco mildly improves mood, suppresses appetite and improves work speed but is very addictive in the long term.</description>
+    <possessionCount>5</possessionCount>
+    <descriptionHyperlinks>
+      <HediffDef>CKT_TobaccoHigh</HediffDef>
+      <HediffDef>CKT_TobaccoTolerance</HediffDef>
+      <HediffDef>CKT_TobaccoAddiction</HediffDef>
+      <HediffDef>Carcinoma</HediffDef>
+      <HediffDef>Asthma</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Crackhead_King_Trader/Cigs_Baggie</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1</drawSize>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>450</WorkToMake>
+      <MarketValue>11</MarketValue>
+      <Mass>0.05</Mass>
+      <DeteriorationRate>1</DeteriorationRate>
+      <Flammability>1.3</Flammability>
+    </statBases>
+    <techLevel>Neolithic</techLevel>
+    <ingestible>
+	  <foodType>Plant, Processed</foodType>
+      <joyKind>Chemical</joyKind>
+      <joy>0.10</joy>
+      <baseIngestTicks>720</baseIngestTicks>
+      <drugCategory>Social</drugCategory>
+      <ingestSound>Ingest_Smoke</ingestSound>
+      <ingestEffect>Smoke_Joint</ingestEffect>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.27,0,0.08)</offset>
+          <behind>true</behind>
+        </northDefault>
+        <east>
+          <offset>(0.45,0,0.08)</offset>
+        </east>
+        <south>
+          <offset>(0.27,0,0.08)</offset>
+        </south>
+        <west>
+          <offset>(-0.50,0,0.08)</offset>
+          <flip>true</flip>
+        </west>
+      </ingestHoldOffsetStanding>
+      <ingestHoldUsesTable>false</ingestHoldUsesTable>
+      <ingestCommandString>Smoke {0}</ingestCommandString>
+      <ingestReportString>Smoking {0}.</ingestReportString>
+      <useEatingSpeedStat>false</useEatingSpeedStat>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>CKT_TobaccoHigh</hediffDef>
+          <severity>0.2</severity>
+          <toleranceChemical>CKT_Tobacco</toleranceChemical>
+        </li>
+        <li Class="IngestionOutcomeDoer_OffsetNeed">
+          <need>Rest</need>
+          <offset>0.05</offset>
+        </li>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>CKT_TobaccoTolerance</hediffDef>
+          <toleranceChemical>CKT_Tobacco</toleranceChemical>
+          <severity>0.025</severity>
+          <divideByBodySize>true</divideByBodySize>
+          <multiplyByGeneToleranceFactors>true</multiplyByGeneToleranceFactors>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <chemical>CKT_Tobacco</chemical>
+        <addictiveness>0.12</addictiveness>
+        <minToleranceToAddict>0.6</minToleranceToAddict>
+        <existingAddictionSeverityOffset>0.06</existingAddictionSeverityOffset>
+        <needLevelOffset>0.9</needLevelOffset>
+		<isCombatEnhancingDrug>true</isCombatEnhancingDrug>
+        <listOrder>412</listOrder>
+      </li>
+    </comps>
+    <allowedArchonexusCount>50</allowedArchonexusCount>
+  </ThingDef>
+  
+  <ThingDef ParentName="DrugBase">
+    <defName>CKT_8ball_Chew</defName>
+    <label>8 ball chewing tobacco</label>
+    <description>Fondly called "drywall", "snuff can" or "piss stinchery" by the king himself. The can contains tobacco leaves processed for chewing. More joy and more addictive than the regularily packaged item. Tobacco mildly improves mood, suppresses appetite and improves work speed but is very addictive in the long term.</description>
+    <possessionCount>5</possessionCount>
+    <descriptionHyperlinks>
+      <HediffDef>CKT_TobaccoHigh</HediffDef>
+      <HediffDef>CKT_TobaccoTolerance</HediffDef>
+      <HediffDef>CKT_TobaccoAddiction</HediffDef>
+      <HediffDef>Carcinoma</HediffDef>
+      <HediffDef>Asthma</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Crackhead_King_Trader/8Ball</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1</drawSize>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>450</WorkToMake>
+      <MarketValue>21</MarketValue>
+      <Mass>0.25</Mass>
+      <Flammability>1.3</Flammability>
+    </statBases>
+    <techLevel>Neolithic</techLevel>
+    <ingestible>
+      <foodType>Plant, Processed</foodType>
+      <joyKind>Chemical</joyKind>
+      <joy>0.70</joy>
+      <maxNumToIngestAtOnce>2</maxNumToIngestAtOnce>
+      <defaultNumToIngestAtOnce>1</defaultNumToIngestAtOnce>
+      <ingestSound>Meal_Eat</ingestSound>
+      <baseIngestTicks>220</baseIngestTicks>
+      <drugCategory>Social</drugCategory>
+      <ingestEffectEat>EatVegetarian</ingestEffectEat>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>CKT_TobaccoHigh</hediffDef>
+          <severity>0.6</severity>
+          <toleranceChemical>CKT_Tobacco</toleranceChemical>
+        </li>
+        <li Class="IngestionOutcomeDoer_OffsetNeed">
+          <need>Rest</need>
+          <offset>0.05</offset>
+        </li>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>CKT_TobaccoTolerance</hediffDef>
+          <toleranceChemical>CKT_Tobacco</toleranceChemical>
+          <severity>0.085</severity>
+          <divideByBodySize>true</divideByBodySize>
+          <multiplyByGeneToleranceFactors>true</multiplyByGeneToleranceFactors>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <chemical>CKT_Tobacco</chemical>
+        <addictiveness>0.12</addictiveness>
+        <minToleranceToAddict>0.6</minToleranceToAddict>
+        <existingAddictionSeverityOffset>0.12</existingAddictionSeverityOffset>
+        <needLevelOffset>0.9</needLevelOffset>
+		<isCombatEnhancingDrug>true</isCombatEnhancingDrug>
+        <listOrder>412</listOrder>
+      </li>
+    </comps>
+    <allowedArchonexusCount>50</allowedArchonexusCount>
+  </ThingDef>
+  
+  <ThingDef ParentName="DrugBase">
+    <defName>CKT_Rimworlds_Best</defName>
+    <label>rimworlds best chewing tobacco</label>
+    <description>Rimworlds Best Golden blend loose leaf chewing tobacco. Slightly higher quality than 8ball but at roughly the same addictiveness. More joy and more addictive than the regularily packaged item. Tobacco mildly improves mood, suppresses appetite and improves work speed but is very addictive in the long term.</description>
+    <possessionCount>5</possessionCount>
+    <descriptionHyperlinks>
+      <HediffDef>CKT_TobaccoHigh</HediffDef>
+      <HediffDef>CKT_TobaccoTolerance</HediffDef>
+      <HediffDef>CKT_TobaccoAddiction</HediffDef>
+      <HediffDef>Carcinoma</HediffDef>
+      <HediffDef>Asthma</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Crackhead_King_Trader/Rims_Best</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1</drawSize>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>450</WorkToMake>
+      <MarketValue>51</MarketValue>
+      <Mass>0.25</Mass>
+      <Flammability>1.3</Flammability>
+    </statBases>
+    <techLevel>Neolithic</techLevel>
+    <ingestible>
+      <foodType>Plant, Processed</foodType>
+      <joyKind>Chemical</joyKind>
+      <joy>0.90</joy>
+      <maxNumToIngestAtOnce>2</maxNumToIngestAtOnce>
+      <defaultNumToIngestAtOnce>1</defaultNumToIngestAtOnce>
+      <ingestSound>Meal_Eat</ingestSound>
+      <baseIngestTicks>220</baseIngestTicks>
+      <drugCategory>Social</drugCategory>
+      <ingestEffectEat>EatVegetarian</ingestEffectEat>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>CKT_TobaccoHigh</hediffDef>
+          <severity>0.6</severity>
+          <toleranceChemical>CKT_Tobacco</toleranceChemical>
+        </li>
+        <li Class="IngestionOutcomeDoer_OffsetNeed">
+          <need>Rest</need>
+          <offset>0.15</offset>
+        </li>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>CKT_TobaccoTolerance</hediffDef>
+          <toleranceChemical>CKT_Tobacco</toleranceChemical>
+          <severity>0.085</severity>
+          <divideByBodySize>true</divideByBodySize>
+          <multiplyByGeneToleranceFactors>true</multiplyByGeneToleranceFactors>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <chemical>CKT_Tobacco</chemical>
+        <addictiveness>0.12</addictiveness>
+        <minToleranceToAddict>0.6</minToleranceToAddict>
+        <existingAddictionSeverityOffset>0.12</existingAddictionSeverityOffset>
+        <needLevelOffset>0.9</needLevelOffset>
+		<isCombatEnhancingDrug>true</isCombatEnhancingDrug>
+        <listOrder>412</listOrder>
+      </li>
+    </comps>
+    <allowedArchonexusCount>50</allowedArchonexusCount>
+  </ThingDef>
+  
+  <ThingDef ParentName="DrugBase">
+    <defName>CKT_Gamblers_Pipe_Tobacco</defName>
+    <label>gamblers pipe tobacco</label>
+    <description>The King likes to gamble with tobaccos and sell the winnings to those he likes. The bag contains a mix of high and low quality offerings which can be chewed or smoked if dried. Less joy and less addictive than the other chews. Tobacco mildly improves mood, suppresses appetite and improves work speed but is very addictive in the long term.</description>
+    <possessionCount>5</possessionCount>
+    <descriptionHyperlinks>
+      <HediffDef>CKT_TobaccoHigh</HediffDef>
+      <HediffDef>CKT_TobaccoTolerance</HediffDef>
+      <HediffDef>CKT_TobaccoAddiction</HediffDef>
+      <HediffDef>Carcinoma</HediffDef>
+      <HediffDef>Asthma</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Drug/Yayo</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+	  <drawSize>1</drawSize>
+	  <color>(191, 110, 55)</color>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>450</WorkToMake>
+      <MarketValue>51</MarketValue>
+      <Mass>0.15</Mass>
+      <Flammability>1.3</Flammability>
+    </statBases>
+    <techLevel>Neolithic</techLevel>
+    <ingestible>
+      <foodType>Plant, Processed</foodType>
+      <joyKind>Chemical</joyKind>
+      <joy>0.50</joy>
+      <maxNumToIngestAtOnce>3</maxNumToIngestAtOnce>
+      <defaultNumToIngestAtOnce>1</defaultNumToIngestAtOnce>
+      <ingestSound>Meal_Eat</ingestSound>
+      <baseIngestTicks>720</baseIngestTicks>
+      <drugCategory>Social</drugCategory>
+      <ingestEffectEat>EatVegetarian</ingestEffectEat>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>CKT_TobaccoHigh</hediffDef>
+          <severity>0.4</severity>
+          <toleranceChemical>CKT_Tobacco</toleranceChemical>
+        </li>
+        <li Class="IngestionOutcomeDoer_OffsetNeed">
+          <need>Rest</need>
+          <offset>0.15</offset>
+        </li>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>CKT_TobaccoTolerance</hediffDef>
+          <toleranceChemical>CKT_Tobacco</toleranceChemical>
+          <severity>0.055</severity>
+          <divideByBodySize>true</divideByBodySize>
+          <multiplyByGeneToleranceFactors>true</multiplyByGeneToleranceFactors>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <chemical>CKT_Tobacco</chemical>
+        <addictiveness>0.12</addictiveness>
+        <minToleranceToAddict>0.6</minToleranceToAddict>
+        <existingAddictionSeverityOffset>0.10</existingAddictionSeverityOffset>
+        <needLevelOffset>0.9</needLevelOffset>
+		<isCombatEnhancingDrug>true</isCombatEnhancingDrug>
+        <listOrder>412</listOrder>
+      </li>
+    </comps>
+    <allowedArchonexusCount>50</allowedArchonexusCount>
+  </ThingDef>
+
+  <HediffDef>
+    <defName>CKT_TobaccoHigh</defName>
+    <label>buzzed on tobacco</label>
+    <labelNoun>a tobacco buzz</labelNoun>
+    <description>Tobacco's active chemical in the bloodstream. Generates a steady stress aloof focus perfect for sustained work activities. Slightly suppresses appetite.</description>
+    <hediffClass>Hediff_High</hediffClass>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.8</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+      <stages>
+        <li>
+          <hungerRateFactorOffset>-0.3</hungerRateFactorOffset>
+          <capMods>
+            <li>
+              <capacity>Consciousness</capacity>
+              <offset>0.05</offset>
+            </li>
+            <li>
+              <capacity>Moving</capacity>
+              <offset>0.05</offset>
+            </li>
+          </capMods>
+		  <statOffsets>
+            <WorkSpeedGlobal>0.3</WorkSpeedGlobal>
+            <MeditationFocusGain MayRequire="Ludeon.RimWorld.Royalty">0.1</MeditationFocusGain>
+          </statOffsets>
+        </li>
+      </stages>
+  </HediffDef>
+  
+  <ThoughtDef>
+    <defName>CKT_TobaccoHigh</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>CKT_TobaccoHigh</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>buzzed on tobacco</label>
+        <description>I feel alive man.</description>
+        <baseMoodEffect>13</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ChemicalDef>
+    <defName>CKT_Tobacco</defName>
+    <label>Tobacco</label>
+    <addictionHediff>CKT_TobaccoAddiction</addictionHediff>
+    <toleranceHediff>CKT_TobaccoTolerance</toleranceHediff>
+    <onGeneratedAddictedToleranceChance>0.8</onGeneratedAddictedToleranceChance>
+    <geneToleranceBuildupFactorResist>0.5</geneToleranceBuildupFactorResist>
+    <geneToleranceBuildupFactorImmune>0</geneToleranceBuildupFactorImmune>
+  </ChemicalDef>
+
+  <NeedDef ParentName="DrugAddictionNeedBase">
+    <defName>CKT_Chemical_Tobacco</defName>
+    <needClass>Need_Chemical</needClass>
+    <label>tobacco</label>
+    <description>Because of a tobacco dependence, this person needs to regularly smoke to avoid withdrawal symptoms.</description>
+    <listPriority>33</listPriority>
+  </NeedDef>
+  
+  <HediffDef ParentName="DrugToleranceBase">
+    <defName>CKT_TobaccoTolerance</defName>
+    <label>tobacco tolerance</label>
+    <description>A built-up tolerance to tobacco. The more severe this tolerance is, the more tobacco it takes to get the same effect.</description>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.013</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_DrugEffectFactor">
+        <chemical>CKT_Tobacco</chemical>
+      </li>
+    </comps>
+    <hediffGivers>
+      <li Class="HediffGiver_RandomDrugEffect">
+        <hediff>Asthma</hediff>
+        <severityToMtbDaysCurve>
+          <points>
+            <li>(0.45, 99999)</li>
+            <li>(0.6, 180)</li>
+            <li>(1, 135)</li>
+          </points>
+        </severityToMtbDaysCurve>
+        <partsToAffect>
+          <li>Lung</li>
+        </partsToAffect>
+        <countToAffect>2</countToAffect>
+      </li>
+      <li Class="HediffGiver_RandomDrugEffect">
+        <hediff>Carcinoma</hediff>
+        <severityToMtbDaysCurve>
+          <points>
+            <li>(0.36, 99999)</li>
+            <li>(0.4, 180)</li>
+            <li>(1, 135)</li>
+          </points>
+        </severityToMtbDaysCurve>
+        <partsToAffect>
+          <li>Lung</li>
+        </partsToAffect>
+        <countToAffect>1</countToAffect>
+      </li>
+    </hediffGivers>
+  </HediffDef>
+
+  <HediffDef ParentName="AddictionBase">
+    <defName>CKT_TobaccoAddiction</defName>
+    <label>tobacco dependence</label>
+    <description>A chemical addiction to tobacco. Long-term use of tobacco has caused neurological adaptations at the cellular level, so the brain can no longer function properly without the drug.\nWithout regular doses of tobacco, withdrawal symptoms will begin. However, extended abstinence will force the brain to adapt back to its normal state, resolving the addiction.</description>
+    <hediffClass>Hediff_Addiction</hediffClass>
+    <causesNeed>CKT_Chemical_Tobacco</causesNeed>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.0133</severityPerDay>
+        <showDaysToRecover>true</showDaysToRecover>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>withdrawal</label>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Binging_DrugMajor</mentalState>
+            <mtbDays>50</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThoughtDef>
+    <defName>CKT_TobaccoWithdrawal</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>CKT_TobaccoAddiction</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <visible>false</visible>
+      </li>
+      <li>
+        <label>tobacco withdrawal</label>
+        <description>I really wish I could smoke. I feel jittery, and my gut has that anxious sensation all the time.</description>
+        <baseMoodEffect>-25</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+</Defs>

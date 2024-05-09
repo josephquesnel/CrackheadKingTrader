@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>CKT_GammaMax</defName>
+    <label>GammaMax 2063</label>
+    <description>The GammaMax 2063 V2.0 Platinum Edition. A futuristic appliance designed to retrieve gamma radiation from space and shoot it into your pineal gland to release DMT into your Serotonin. The appliance is a device retrieved from the year 2063 by the King to be sold in his shop. it is presumed that the Platinum edition is the top of the line model and is designed for home use.</description>
+    <graphicData>
+      <texPath>Things/Building/Special/PsychicEmanator</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1, 1)</drawSize>
+	  <color>(104, 104, 104)</color>
+      <shadowData>
+        <volume>(0.3, 0.6, 0.3)</volume>
+        <offset>(0.0, 0.0, -0.1)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(0,0.75,1.0,0.5)</rect>
+      </damageData>
+    </graphicData>
+	<tradeability>Buyable</tradeability>
+    <uiIconScale>0.85</uiIconScale>
+    <thingCategories>
+      <li>BuildingsSpecial</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>20</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_MoteEmitter">
+        <mote>Mote_PsychicEmanatorEffect</mote>
+        <emissionInterval>350</emissionInterval>
+      </li>
+      <li Class="CompProperties_Breakdownable"/>
+      <li Class="CompProperties_Flickable"/>
+    </comps>
+    <altitudeLayer>Building</altitudeLayer>
+    <building>
+      <destroySound>BuildingDestroyed_Metal_Medium</destroySound>
+    </building>
+    <statBases>
+      <MarketValue>4307</MarketValue>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <Beauty>5</Beauty>
+      <Mass>15</Mass>
+      <WorkToBuild>2000</WorkToBuild>
+    </statBases>
+    <thingSetMakerTags>
+      <li>RewardStandardCore</li>
+    </thingSetMakerTags>
+    <fillPercent>0.2</fillPercent>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <pathCost>30</pathCost>
+    <passability>PassThroughOnly</passability>
+    <rotatable>false</rotatable>
+    <canOverlapZones>false</canOverlapZones>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <specialDisplayRadius>19.9</specialDisplayRadius>
+    <tickerType>Normal</tickerType>
+    <tradeTags>
+      <li>ExoticBuilding</li>
+    </tradeTags>
+  </ThingDef>
+  
+  <ThoughtDef>
+    <defName>CKT_GammaMaxSoothe</defName>
+    <workerClass>CrackheadKingTrader.ThoughtWorker_GammaMax_Soothe</workerClass>
+    <effectMultiplyingStat>PsychicSensitivity</effectMultiplyingStat>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>GammaMax DMT Tripping</label>
+        <description>Its like a one way ticket to the afterlife but you get two tickets.</description>
+        <baseMoodEffect>10</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>CKT_Strange_Glowing_Thing</defName>
+    <label>strange glowing thing</label>
+    <description>A strange glowing thing emanating profound power fluctuations. "Its name is Jamey, Jamey is hot, its right behind us!"</description>
+    <graphicData>
+      <texPath>Things/Building/Special/VanometricPowerCell</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+	  <color>(72, 188, 72)</color>
+      <drawSize>(1, 1)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+	<tradeability>Buyable</tradeability>
+    <altitudeLayer>Building</altitudeLayer>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <pathCost>42</pathCost>
+    <fillPercent>0.6</fillPercent>
+    <passability>PassThroughOnly</passability>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <canOverlapZones>false</canOverlapZones>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.5</staticSunShadowHeight>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <thingCategories>
+      <li>BuildingsSpecial</li>
+    </thingCategories>
+    <statBases>
+      <MarketValue>6200</MarketValue>
+      <MaxHitPoints>500</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <Mass>15</Mass>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <size>(1, 1)</size>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerPlant</compClass>
+        <basePowerConsumption>-2000</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>5</glowRadius>
+        <glowColor>(72, 188, 72)</glowColor>
+      </li>
+    </comps>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <tradeTags>
+      <li>ExoticBuilding</li>
+    </tradeTags>
+  </ThingDef>
+
+</Defs>
