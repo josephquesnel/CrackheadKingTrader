@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <TraderKindDef>
+    <defName>Orbital_Crackhead_King</defName>
+    <label>Crackhead King</label>
+    <commonality>2</commonality>
+    <orbital>true</orbital>
+    <stockGenerators>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>Silver</thingDef>
+        <countRange>4706~4706</countRange>
+      </li>
+
+      <!-- Drugs -->
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Beer_SteelyReserve</thingDef>
+        <countRange>10~250</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Wine_Puckfast</thingDef>
+        <countRange>10~250</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Wine_IrishRose</thingDef>
+        <countRange>10~250</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Bottled_Water</thingDef>
+        <countRange>10~250</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Beer_OldEnglish</thingDef>
+        <countRange>10~250</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Baderall_Pills</thingDef>
+        <countRange>10~250</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Spray_Paint_Can</thingDef>
+        <countRange>10~250</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Can_Of_Death</thingDef>
+        <countRange>10~250</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Profen_Pill</thingDef>
+        <countRange>50~250</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Laced_Bentanal</thingDef>
+        <countRange>10~250</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Magnesium_Pill</thingDef>
+        <countRange>10~250</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Edibles</thingDef>
+        <countRange>10~250</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Burned_Vape</thingDef>
+        <countRange>10~250</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Blue_Wide_Cigarettes</thingDef>
+        <countRange>50~450</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Bagged_Cigarettes</thingDef>
+        <countRange>50~450</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_8ball_Chew</thingDef>
+        <countRange>50~450</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Rimworlds_Best</thingDef>
+        <countRange>50~450</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Gamblers_Pipe_Tobacco</thingDef>
+        <countRange>50~450</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Whippet_Canister</thingDef>
+        <countRange>10~250</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Dog_Bowl</thingDef>
+        <countRange>1~3</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Chemfuel_Tank</thingDef>
+        <countRange>1~3</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_BumpBox</thingDef>
+        <countRange>1~3</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_1984_MonteCarlo</thingDef>
+        <countRange>1~3</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Terry</thingDef>
+        <countRange>1~3</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_GammaMax</thingDef>
+        <countRange>0~1</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Strange_Glowing_Thing</thingDef>
+        <countRange>0~1</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Video_Game_Neurostimulator</thingDef>
+        <countRange>0~4</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Country_Music</thingDef>
+        <countRange>0~4</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Impact_Driver</thingDef>
+        <countRange>0~2</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Copper_Pipe</thingDef>
+        <countRange>0~2</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Tape_Measure</thingDef>
+        <countRange>0~2</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Burned_Glove</thingDef>
+        <countRange>0~2</countRange>
+      </li> 
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Drill_Press_Chuck</thingDef>
+        <countRange>1~10</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Random_Junk</thingDef>
+		<countRange>1~10</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Dumbell</thingDef>
+        <countRange>1~10</countRange>
+      </li>
+	  <li Class="StockGenerator_Animals">
+        <maxWildness>0.70</maxWildness>
+        <tradeTagsSell>
+          <li>CKT_Animals</li>
+        </tradeTagsSell>
+        <tradeTagsBuy>
+          <li>AnimalExotic</li>
+        </tradeTagsBuy>
+        <kindCountRange>1</kindCountRange>
+        <countRange>3~4</countRange>
+        <createMatingPair>
+          <li>CKT_Animals</li>
+        </createMatingPair>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_EggTrogloditeUnfertilized</thingDef>
+        <countRange>5~100</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_EggTrogloditeFertilized</thingDef>
+        <countRange>2~10</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_RedBowl</thingDef>
+        <countRange>20~50</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Burrito</thingDef>
+        <countRange>5~30</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>ComponentIndustrial</thingDef>
+        <countRange>10~100</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>ComponentSpacer</thingDef>
+        <countRange>5~10</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>Gold</thingDef>
+        <countRange>100~1000</countRange>
+      </li>
+      <!-- Buying -->
+      <li Class="StockGenerator_BuyExpensiveSimple" />
+      <li Class="StockGenerator_BuyTradeTag"><tag>Clothing</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>Art</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>Drugs</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>MusicalInstrument</tag></li>
+
+    </stockGenerators>
+  </TraderKindDef>
+
+</Defs>

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="ChunkBase">
+    <defName>CKT_Drill_Press_Chuck</defName>
+    <label>drill press chuck (stolen)</label>
+    <description>A chuck taken from a drill press. While it's useless in its current form, it can be smelted to recover steel.</description>
+    <graphicData>
+      <texPath>Crackhead_King_Trader/Chuck</texPath>
+	  <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<tradeability>Buyable</tradeability>
+    <statBases>
+      <Mass>2</Mass>
+	  <MarketValue>20</MarketValue>
+    </statBases>
+    <soundDrop>ChunkSlag_Drop</soundDrop>
+    <thingCategories>
+      <li>Chunks</li>
+    </thingCategories>
+    <smeltable>true</smeltable>
+    <smeltProducts>
+      <Steel>15</Steel>
+    </smeltProducts>
+  </ThingDef>
+
+  <ThingDef ParentName="ChunkBase">
+    <defName>CKT_Dumbell</defName>
+    <label>40lbs dumbell</label>
+    <description>A dumbell weighing 40lbs. While it's useless in its current form, it can be smelted to recover steel.</description>
+    <graphicData>
+      <texPath>Crackhead_King_Trader/Dumbell</texPath>
+	  <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<tradeability>Buyable</tradeability>
+    <statBases>
+      <Mass>17</Mass>
+	  <MarketValue>50</MarketValue>
+    </statBases>
+    <soundDrop>ChunkSlag_Drop</soundDrop>
+    <thingCategories>
+      <li>Chunks</li>
+    </thingCategories>
+    <smeltable>true</smeltable>
+    <smeltProducts>
+      <Steel>40</Steel>
+    </smeltProducts>
+  </ThingDef>
+
+  <ThingDef ParentName="ChunkBase">
+    <defName>CKT_Random_Junk</defName>
+    <label>thewalt toolbox of junk</label>
+    <description>A thewalt company toolbox containing many strange items. It can be smelted to recover steel and components.\n\nContains: \n Half a football (cooked) \n Chain Links (adult toy kind) \n red pen (chewed) \n construction screws \n compass \n half a map (yo where tf are we dude) \n 3 C chargers \n 2 condoms (her pleasure)</description>
+    <graphicData>
+      <texPath>Crackhead_King_Trader/Walt_Box</texPath>
+	  <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<tradeability>Buyable</tradeability>
+    <statBases>
+      <Mass>5</Mass>
+	  <MarketValue>80</MarketValue>
+    </statBases>
+    <soundDrop>ChunkSlag_Drop</soundDrop>
+    <thingCategories>
+      <li>Chunks</li>
+    </thingCategories>
+    <smeltable>true</smeltable>
+    <smeltProducts>
+      <Steel>5</Steel>
+	  <ComponentIndustrial>4</ComponentIndustrial>
+    </smeltProducts>
+  </ThingDef>
+
+</Defs>
