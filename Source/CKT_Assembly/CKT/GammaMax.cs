@@ -45,4 +45,24 @@ namespace CrackheadKingTrader
             return false;
         }
     }
+
+    public class CKT_IngestionOutcomeDoer_ReduceHediff : IngestionOutcomeDoer
+    {
+        public HediffDef hediffDef;
+
+        public float severity = -1f;
+
+        public CKT_IngestionOutcomeDoer_ReduceHediff()
+        {
+        }
+
+        protected override void DoIngestionOutcomeSpecial(Pawn pawn, Thing ingested, int ingestedCount)
+        {
+            Hediff hediff = pawn.health.hediffSet.GetFirstHediffOfDef(this.hediffDef);
+            if (hediff != null)
+            {
+                hediff.Severity += Math.Max(-hediff.Severity, this.severity);
+            }            
+        }
+    }
 }

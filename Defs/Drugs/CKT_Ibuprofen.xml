@@ -17,7 +17,7 @@
     <rotatable>false</rotatable>
     <stackLimit>25</stackLimit>
     <statBases>
-      <MarketValue>100</MarketValue>
+      <MarketValue>20</MarketValue>
       <Mass>0.3</Mass>
       <Flammability>0.5</Flammability>
     </statBases>
@@ -101,7 +101,7 @@
   
    <HediffDef ParentName="AddictionBase">
     <defName>CKT_ProfenAddiction</defName>
-    <label>huffed paint addiction</label>
+    <label>profen addiction</label>
     <description>An addiction to profen. Mild and wears away in an hour.</description>
     <hediffClass>Hediff_Addiction</hediffClass>
     <comps>

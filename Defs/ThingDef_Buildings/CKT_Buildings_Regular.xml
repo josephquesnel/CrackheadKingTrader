@@ -181,7 +181,7 @@
     <label>bump box</label>
 	<description>A bump box for holding drugs. Holds 5 stacks. "this is where the magic happens"</description>
     <graphicData>
-      <texPath>Things/Building/Misc/AnimalBed/AnimalSleepBox</texPath>
+      <texPath>Crackhead_King_Trader/Bump_Box</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>(0.8,0.8)</drawSize>
     </graphicData>

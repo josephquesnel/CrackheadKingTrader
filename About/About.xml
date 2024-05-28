@@ -16,11 +16,18 @@ Adds a large amount of drugs:
 MANY hard drugs (some are beneficial only)
 Gloves, Shoes and Socks
 3 kinds of smeltable scraps
+2 new bionic implants
 Some rare items and buildings sold only by the trader
 Requires VFE core for apparell hediffs.
 
 Items found are based entirely on this list and meme:
 https://www.youtube.com/watch?v=56boQOgekas
+
+Source:
+https://github.com/josephquesnel/CrackheadKingTrader
+
+To do:
+Backend stuff for translations.
 
   </description>
 	<url></url>

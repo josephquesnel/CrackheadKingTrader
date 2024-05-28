@@ -142,7 +142,7 @@
       <outcomeDoers>
         <li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>CKT_TobaccoHigh</hediffDef>
-          <severity>0.2</severity>
+          <severity>0.22</severity>
           <toleranceChemical>CKT_Tobacco</toleranceChemical>
         </li>
         <li Class="IngestionOutcomeDoer_OffsetNeed">
@@ -347,7 +347,7 @@
       <outcomeDoers>
         <li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>CKT_TobaccoHigh</hediffDef>
-          <severity>0.4</severity>
+          <severity>0.55</severity>
           <toleranceChemical>CKT_Tobacco</toleranceChemical>
         </li>
         <li Class="IngestionOutcomeDoer_OffsetNeed">
@@ -381,7 +381,7 @@
     <defName>CKT_TobaccoHigh</defName>
     <label>buzzed on tobacco</label>
     <labelNoun>a tobacco buzz</labelNoun>
-    <description>Tobacco's active chemical in the bloodstream. Generates a steady stress aloof focus perfect for sustained work activities. Slightly suppresses appetite.</description>
+    <description>Tobacco's active chemical in the bloodstream. Generates a steady stress-aloof focus perfect for sustained work activities. Slightly suppresses appetite.</description>
     <hediffClass>Hediff_High</hediffClass>
     <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
     <scenarioCanAdd>true</scenarioCanAdd>
@@ -389,13 +389,13 @@
     <isBad>false</isBad>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-0.8</severityPerDay>
+        <severityPerDay>-0.3</severityPerDay>
         <showHoursToRecover>true</showHoursToRecover>
       </li>
     </comps>
       <stages>
         <li>
-          <hungerRateFactorOffset>-0.3</hungerRateFactorOffset>
+          <hungerRateFactorOffset>-0.1</hungerRateFactorOffset>
           <capMods>
             <li>
               <capacity>Consciousness</capacity>
@@ -407,7 +407,7 @@
             </li>
           </capMods>
 		  <statOffsets>
-            <WorkSpeedGlobal>0.3</WorkSpeedGlobal>
+            <WorkSpeedGlobal>0.25</WorkSpeedGlobal>
             <MeditationFocusGain MayRequire="Ludeon.RimWorld.Royalty">0.1</MeditationFocusGain>
           </statOffsets>
         </li>
@@ -465,7 +465,7 @@
         <severityToMtbDaysCurve>
           <points>
             <li>(0.45, 99999)</li>
-            <li>(0.6, 180)</li>
+            <li>(0.62, 180)</li>
             <li>(1, 135)</li>
           </points>
         </severityToMtbDaysCurve>
@@ -479,7 +479,7 @@
         <severityToMtbDaysCurve>
           <points>
             <li>(0.36, 99999)</li>
-            <li>(0.4, 180)</li>
+            <li>(0.5, 180)</li>
             <li>(1, 135)</li>
           </points>
         </severityToMtbDaysCurve>

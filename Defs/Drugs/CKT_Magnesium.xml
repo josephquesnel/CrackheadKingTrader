@@ -18,7 +18,7 @@
     <rotatable>false</rotatable>
     <stackLimit>25</stackLimit>
     <statBases>
-      <MarketValue>100</MarketValue>
+      <MarketValue>18</MarketValue>
       <Mass>0.025</Mass>
       <Flammability>0.5</Flammability>
     </statBases>
@@ -90,8 +90,8 @@
   
   <HediffDef ParentName="AddictionBase">
     <defName>CKT_MagnesiumAddiction</defName>
-    <label>huffed paint addiction</label>
-    <description>An addiction to magnesium suppliments. Mild and wears away quickly.</description>
+    <label>God Bless You</label>
+    <description>An addiction to magnesium suppliments. Mild and wears away quickly. Easteregg blessings from CKT dev to you. "Love you /b/ros, f**k leafs, europoors and shoutout to my boy burialgoods for that pure tasty existential dread. This is my mod, so i have the authority from GOD to bless you. I dont make the rules I just crusade with em. Deus Vult!"</description>
     <hediffClass>Hediff_Addiction</hediffClass>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">

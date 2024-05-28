@@ -444,15 +444,17 @@
       <canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
       <tableDesired>false</tableDesired>
       <outcomeDoers>
-        <li Class="IngestionOutcomeDoer_GiveHediff">
+        <li Class="CrackheadKingTrader.CKT_IngestionOutcomeDoer_ReduceHediff">
           <hediffDef>AlcoholHigh</hediffDef>
-          <severity>0.01</severity>
-          <toleranceChemical>Alcohol</toleranceChemical>
+          <severity>-0.2</severity>
         </li>
-        <li Class="IngestionOutcomeDoer_GiveHediff">
+        <li Class="CrackheadKingTrader.CKT_IngestionOutcomeDoer_ReduceHediff">
           <hediffDef>AlcoholTolerance</hediffDef>
-          <toleranceChemical>Alcohol</toleranceChemical>
-          <severity>0.01</severity>
+          <severity>-0.1</severity>
+        </li>
+		<li Class="CrackheadKingTrader.CKT_IngestionOutcomeDoer_ReduceHediff">
+          <hediffDef>Hangover</hediffDef>
+          <severity>-0.4</severity>
         </li>
       </outcomeDoers>
     </ingestible>

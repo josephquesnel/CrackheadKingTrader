@@ -31,5 +31,46 @@
 	<Operation Class="PatchOperationRemove">
 	  <xpath>Defs/RecipeDef[defName="ExtractMetalFromSlag"]/products</xpath>
 	</Operation>
-
+	
+	<!-- Only runs if VFE Apparel is active -->
+	<Operation Class="PatchOperationConditional" MayRequire="vanillaexpanded.vappe">
+		<xpath>Defs/ThingDef[defName="CKT_Shoes"]</xpath>
+		<match Class="PatchOperationSequence" MayRequire="vanillaexpanded.vappe">
+		  <operations>
+			<li Class="PatchOperationRemove" MayRequire="vanillaexpanded.vappe">
+			  <xpath>Defs/ThingDef[defName="CKT_Shoes"]</xpath>
+			</li>
+			<li Class="PatchOperationRemove" MayRequire="vanillaexpanded.vappe">
+			  <xpath>Defs/ThingDef[defName="CKT_Socks"]</xpath>
+			</li>
+			<li Class="PatchOperationRemove" MayRequire="vanillaexpanded.vappe">
+			  <xpath>Defs/ThingDef[defName="CKT_Burned_Glove"]</xpath>
+			</li>
+			<li Class="PatchOperationRemove" MayRequire="vanillaexpanded.vappe">
+			  <xpath>Defs/TraderKindDef[defName="CKT_Orbital_Crackhead_King"]/stockGenerators/li[thingDef="CKT_Burned_Glove"]</xpath>
+			</li>
+		  </operations>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional" MayRequire="mallow.shoes.socks">
+		<xpath>Defs/ThingDef[defName="CKT_Shoes"]</xpath>
+		<match Class="PatchOperationSequence" MayRequire="mallow.shoes.socks">
+		  <operations>
+			<li Class="PatchOperationRemove" MayRequire="mallow.shoes.socks">
+			  <xpath>Defs/ThingDef[defName="CKT_Shoes"]</xpath>
+			</li>
+			<li Class="PatchOperationRemove" MayRequire="mallow.shoes.socks">
+			  <xpath>Defs/ThingDef[defName="CKT_Socks"]</xpath>
+			</li>
+			<li Class="PatchOperationRemove" MayRequire="mallow.shoes.socks">
+			  <xpath>Defs/ThingDef[defName="CKT_Burned_Glove"]</xpath>
+			</li>
+			<li Class="PatchOperationRemove" MayRequire="mallow.shoes.socks">
+			  <xpath>Defs/TraderKindDef[defName="CKT_Orbital_Crackhead_King"]/stockGenerators/li[thingDef="CKT_Burned_Glove"]</xpath>
+			</li>
+		  </operations>
+		</match>
+	</Operation>
+	
 </Patch>

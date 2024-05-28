@@ -3,7 +3,7 @@
   <ThingDef ParentName="DrugBase">
     <defName>CKT_Can_Of_Death</defName>
     <label>bad smell jar</label>
-    <description>AKA portal to hell. "Hey man, smell this!".\n\nReally good for pissing off people! Almost guaranteed to start a fight.</description>
+    <description>AKA portal to hell. "Hey man, smell this!".\n\nStink enough to wake someone out of an anasthetic induced coma. Really good for pissing off people! Almost guaranteed to start a fight.</description>
     <descriptionHyperlinks>
       <HediffDef>CKT_CanOfDeathHigh</HediffDef>
     </descriptionHyperlinks>
@@ -40,8 +40,12 @@
       <outcomeDoers>
         <li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>CKT_CanOfDeathHigh</hediffDef>
-          <severity>0.2</severity>
+          <severity>0.3</severity>
 		  <toleranceChemical>CKT_CanOfDeath</toleranceChemical>
+        </li>
+		<li Class="CrackheadKingTrader.CKT_IngestionOutcomeDoer_ReduceHediff">
+          <hediffDef>Anesthetic</hediffDef>
+          <severity>-0.5</severity>
         </li>
       </outcomeDoers>
     </ingestible>
@@ -60,7 +64,7 @@
     <hediffClass>Hediff_High</hediffClass>
     <label>boofed by can of death</label>
     <labelNoun>profoundly disgusted</labelNoun>
-    <description>Smelled something profoundly disgusting that has unsettled the nerves and destroyed any chance of a good mood.</description>
+    <description>Smelled something profoundly disgusting. Nerves are torn between alertness and nauseating overstimulation.</description>
     <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
     <scenarioCanAdd>true</scenarioCanAdd>
     <maxSeverity>1.0</maxSeverity>
