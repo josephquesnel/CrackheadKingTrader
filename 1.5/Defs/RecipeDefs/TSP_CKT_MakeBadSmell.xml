@@ -34,14 +34,6 @@
 				<li>AllowFresh</li>
 			</specialFiltersToDisallow>
 		</fixedIngredientFilter>
-		<fixedIngredientFilter Inherit="False">
-			<categories>
-				<li>Corpses</li>
-			</categories>
-			<specialFiltersToDisallow Inherit="False">
-				<li>AllowFresh</li>
-			</specialFiltersToDisallow>
-		</fixedIngredientFilter>
 		<defaultIngredientFilter Inherit="False">
 			<categories>
 				<li>Corpses</li>

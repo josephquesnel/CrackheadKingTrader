@@ -51,12 +51,12 @@
           <hediffDef>TSP_CKT_GeorgeFloydRoyalFlush_High</hediffDef>
           <severity>1</severity>
           <toleranceChemical>Psychite</toleranceChemical>
+		  <divideByBodySize>false</divideByBodySize>
         </li>
         <li Class="IngestionOutcomeDoer_OffsetNeed">
           <need>Rest</need>
           <offset>1</offset>
           <toleranceChemical>Psychite</toleranceChemical>
-		  <divideByBodySize>false</divideByBodySize>
         </li>
         <li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>PsychiteTolerance</hediffDef>

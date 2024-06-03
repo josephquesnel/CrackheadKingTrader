@@ -130,7 +130,7 @@
 						<li MayRequire="TSP.Isengriff.Storytime">ManualGrinder</li>
 					</recipeUsers>
 					<researchPrerequisites Inherit="False">
-						<li>VRecyclingE_BasicRecycling</li>
+						<li MayRequire="vanillaexpanded.recycling">VRecyclingE_BasicRecycling</li>
 					</researchPrerequisites>
 				</RecipeDef>
 			</value>
@@ -182,7 +182,6 @@
 							<li MayRequire="ludeon.rimworld.biotech">Wastepack</li>
 						</thingDefs>
 					</defaultIngredientFilter>
-					<researchPrerequisites Inherit="False" MayRequire="ludeon.rimworld.biotech"></researchPrerequisites>
 					<products>
 						<CKT_Can_Of_Death>50</CKT_Can_Of_Death>
 					</products>
@@ -196,8 +195,9 @@
 						<li MayRequire="TSP.Isengriff.Storytime">ManualGrinder</li>
 						<li MayRequire="TSP.Isengriff.Storytime">ElectricGrinder</li>
 					</recipeUsers>
-					<researchPrerequisites Inherit="False">
-						<li>VRecyclingE_BasicRecycling</li>
+					<researchPrerequisites Inherit="False" MayRequire="ludeon.rimworld.biotech">
+						<li MayRequire="vanillaexpanded.recycling">VRecyclingE_BasicRecycling</li>
+						<li>ToxGas</li>
 					</researchPrerequisites>
 				</RecipeDef>
 			</value>

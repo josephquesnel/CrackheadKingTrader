@@ -9,7 +9,7 @@
       <HediffDef>CKT_CanOfDeathHigh</HediffDef>
 	  <RecipeDef>TSP_CKT_Make_BadSmellJar_Corpse</RecipeDef>
 	  <RecipeDef MayRequire="ludeon.rimworld.biotech">TSP_CKT_Make_BadSmellJar_ToxicWastePack</RecipeDef>
-	  <RecipeDef MayRequire="TSP.Isengriff.Storytime">TSP_CKT_Make_BadSmellJar_Corpse</RecipeDef>
+	  <RecipeDef MayRequire="TSP.Isengriff.Storytime">TSP_CKT_ST_BadSmellJar_Poison</RecipeDef>
 	  <RecipeDef MayRequire="tsp.bathroomhumor">TSP_CKT_DZ_BadSmellJar_PoopChunk</RecipeDef>
 	  <RecipeDef MayRequire="vanillaexpanded.recycling">TSP_CKT_VFERC_BadSmellJar_Trash</RecipeDef>
     </descriptionHyperlinks>

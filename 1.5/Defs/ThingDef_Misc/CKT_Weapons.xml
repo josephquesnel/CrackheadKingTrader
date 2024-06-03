@@ -22,6 +22,7 @@
     </inspectorTabs>
     <tradeTags>
       <li>WeaponMelee</li>
+	  <li>CrackHeadKing</li>
     </tradeTags>
   </ThingDef>
 
@@ -113,7 +114,7 @@
   <ThingDef ParentName="CKT_UncraftableBaseMeleeWeapon">
     <defName>CKT_Copper_Pipe</defName>
     <label>detached pipe</label>
-    <description>A pipe likely stolen from some Outlander villager's sprinkler system. Can be used to bash heads in or repair plumbing.</description>
+    <description>A detached piece of a pipe, likely stolen from some Outlander villager's sprinkler system. Can be used to bash heads in or repair plumbing.</description>
     <graphicData>
       <texPath>Crackhead_King_Trader/Copper_Pipe</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -121,8 +122,10 @@
     <uiIconScale>1.1</uiIconScale>
     <techLevel>Industrial</techLevel>
     <soundInteract>Interact_Grenade</soundInteract>
+	<!--
     <meleeHitSound MayRequire="flangopink.metalpipe">MetalPipeClangShort</meleeHitSound>
     <soundDrop MayRequire="flangopink.metalpipe">MetalPipeClang</soundDrop>
+	-->
     <weaponTags>
       <li>NeolithicMeleeBasic</li>
 	  <li>MedievalMeleeBasic</li>
