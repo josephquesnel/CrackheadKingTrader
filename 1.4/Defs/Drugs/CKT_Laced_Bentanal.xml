@@ -4,18 +4,20 @@
   <ThingDef ParentName="TSP_CKT_DrugBase">
     <defName>CKT_Laced_Bentanal</defName>
     <label>George Floyd Royal Flush</label>
-    <description>While it is unknown who George Floyd is, the comedic packaging seems to indicate that "a George Floyd" is a derogatory slang term for an Urb-World criminal. What is known, though, is its effects. This sticky numbing psychite paste is laced with a cocktail of stimulant additives, principally Bentanyl-brand fentanyl and asbestos. While it is cheap to produce and extremely pleasurable to use, it is exceptionally addictive. The George Floyd Royal Flush is known for destroying the lives of people in inner cities in the overpopulated Urb-Worlds. \n \n It is so potent that it takes the user's breath away...</description>
+    <description>While it is unknown who George Floyd is, the comedic packaging seems to indicate that "a George Floyd" is a derogatory slang term for an Urb-World criminal. What is known, though, is its effects. This sticky numbing psychite paste is laced with a cocktail of stimulant additives, principally Bentanyl-brand fentanyl and asbestos. While it is cheap to produce and extremely pleasurable to use, it is exceptionally addictive. The George Floyd Royal Flush is known for destroying the lives of people in inner cities in the overpopulated Urb-Worlds. \n \n Four-fifths of users become addicted on the first hit. It is so potent that it takes the user's breath away...</description>
     <descriptionHyperlinks>
-      <HediffDef>FlakeHigh</HediffDef>
-      <HediffDef>PsychiteTolerance</HediffDef>
-      <HediffDef>PsychiteAddiction</HediffDef>
-      <HediffDef>ChemicalDamageSevere</HediffDef>
+		<HediffDef>TSP_CKT_GeorgeFloydRoyalFlush_High</HediffDef>
+		<HediffDef>FlakeHigh</HediffDef>
+		<HediffDef>PsychiteTolerance</HediffDef>
+		<HediffDef>PsychiteAddiction</HediffDef>
+		<HediffDef>ChemicalDamageSevere</HediffDef>
     </descriptionHyperlinks>
     <graphicData>
       <texPath>Crackhead_King_Trader/GeorgeFloydRoyalFlush</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
-      <color>(217, 147, 23)</color>
-      <drawSize>0.55</drawSize>
+	  <color>(255, 255, 255)</color> <!-- (Not colored) -->
+      <!-- <color>(217, 147, 23)</color> -->
+      <drawSize>1.55</drawSize>
     </graphicData>
     <rotatable>false</rotatable>
     <statBases>
@@ -55,13 +57,13 @@
         </li>
         <li Class="IngestionOutcomeDoer_OffsetNeed">
           <need>Rest</need>
-          <offset>1</offset>
+          <offset>1.25</offset>
           <toleranceChemical>Psychite</toleranceChemical>
         </li>
         <li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>PsychiteTolerance</hediffDef>
           <toleranceChemical>Psychite</toleranceChemical>
-          <severity>0.09</severity>
+          <severity>0.19</severity>
           <divideByBodySize>true</divideByBodySize>
           <multiplyByGeneToleranceFactors>true</multiplyByGeneToleranceFactors>
         </li>
@@ -70,37 +72,49 @@
     <comps>
       <li Class="CompProperties_Drug">
         <chemical>Psychite</chemical>
-        <addictiveness>0.05</addictiveness>
-        <existingAddictionSeverityOffset>0.60</existingAddictionSeverityOffset>
-        <needLevelOffset>1</needLevelOffset>
+        <addictiveness>0.8</addictiveness>
+        <existingAddictionSeverityOffset>1</existingAddictionSeverityOffset>
+		<isCombatEnhancingDrug>true</isCombatEnhancingDrug>
+		<minToleranceToAddict>0</minToleranceToAddict>
+        <needLevelOffset>2</needLevelOffset>
         <listOrder>111</listOrder>
         <overdoseSeverityOffset>0.18~0.35</overdoseSeverityOffset>
         <largeOverdoseChance>0.025</largeOverdoseChance>
       </li>
     </comps>
+	<tradeTags>
+		<li>ST_Poison</li>
+	</tradeTags>
   </ThingDef>  
   
   <HediffDef>
     <defName>TSP_CKT_GeorgeFloydRoyalFlush_High</defName>
     <label>high on George Floyd Royal Flush</label>
-    <labelNoun>a cannot breathing</labelNoun>
-    <description>This poor Pawn has taken the super charged Psychite roller coaster that is the George Floyd Royal Flush. Generates an euphoric, debilitating high. Flake has nothing compared to this.</description>
+    <labelNoun>a royal flush flushing</labelNoun>
+    <description>This poor Pawn has taken the super charged Psychite roller coaster that is the George Floyd Royal Flush. Generates an euphoric, debilitating high that gives one super speed. Flake has nothing compared to this.</description>
+    <descriptionHyperlinks>
+		<ThingDef>CKT_Laced_Bentanal</ThingDef>
+		<HediffDef>FlakeHigh</HediffDef>
+		<HediffDef>PsychiteTolerance</HediffDef>
+		<HediffDef>PsychiteAddiction</HediffDef>
+		<HediffDef>ChemicalDamageSevere</HediffDef>
+    </descriptionHyperlinks>
     <hediffClass>Hediff_High</hediffClass>
     <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
     <scenarioCanAdd>true</scenarioCanAdd>
-    <maxSeverity>1.0</maxSeverity>
+    <maxSeverity>1</maxSeverity>
     <isBad>false</isBad>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-1.0</severityPerDay>
+        <severityPerDay>-0.7</severityPerDay>
         <showHoursToRecover>true</showHoursToRecover>
       </li>
     </comps>
       <stages>
         <li>
-          <painFactor>0.15</painFactor>
+          <painFactor>0</painFactor>
           <statFactors>
-            <RestFallRateFactor>0.23</RestFallRateFactor>
+            <RestFallRateFactor>0.13</RestFallRateFactor>
           </statFactors>
           <capMods>
             <li>
@@ -111,9 +125,32 @@
               <capacity>Moving</capacity>
               <offset>2</offset>
             </li>
+			<li>
+				<capacity>BloodPumping</capacity>
+				<offset>2</offset>
+			</li>
+			<li>
+				<capacity>Breathing</capacity>
+				<postFactor>0.75</postFactor> <!-- I CAN'T BREATHE! I CAN'T BREATHE!! -->
+			</li>
           </capMods>
         </li>
       </stages>
   </HediffDef>
+  
+  <ThoughtDef>
+    <defName>TSP_CKT_GFRF_ICantBreathe</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>TSP_CKT_GeorgeFloydRoyalFlush_High</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>George Floyd Royal Flushed Candu Annyfinn</label>
+        <description>WHOOOOOO! MOMMA!! I FEEL LIKE I CAN DO ANYTHING! I could loot an entire Urb-World's commercial district during a medical quarantine and purposely spread diseases that kill tens of thousands!</description>
+        <baseMoodEffect>100</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
 </Defs>
 
