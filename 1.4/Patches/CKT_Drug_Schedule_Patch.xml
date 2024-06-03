@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationAdd">
+	  <xpath>Defs/DrugPolicyDef[defName="SocialDrugs"]/entries</xpath>
+	  <order>Append</order>
+	  <value>
+		<li>
+			<drug>CKT_Beer_SteelyReserve</drug>
+			<allowedForJoy>true</allowedForJoy>
+		</li>
+		<li>
+			<drug>CKT_Beer_OldEnglish</drug>
+			<allowedForJoy>true</allowedForJoy>
+		</li>
+		<li>
+			<drug>CKT_Wine_Puckfast</drug>
+			<allowedForJoy>true</allowedForJoy>
+		</li>
+		<li>
+			<drug>CKT_Wine_IrishRose</drug>
+			<allowedForJoy>true</allowedForJoy>
+		</li>
+		<li>
+			<drug>CKT_Edibles</drug>
+			<allowedForJoy>true</allowedForJoy>
+        </li>
+		<li>
+			<drug>CKT_Burned_Vape</drug>
+			<allowedForJoy>true</allowedForJoy>
+        </li>
+	  </value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+	  <xpath>Defs/DrugPolicyDef[defName="OneDrinkPerDay"]/entries</xpath>
+	  <order>Append</order>
+	  <value>
+		<li>
+			<drug>CKT_Beer_SteelyReserve</drug>
+			<allowedForJoy>true</allowedForJoy>
+		</li>
+		<li>
+			<drug>CKT_Beer_OldEnglish</drug>
+			<allowedForJoy>true</allowedForJoy>
+		</li>
+		<li>
+			<drug>CKT_Wine_Puckfast</drug>
+			<allowedForJoy>true</allowedForJoy>
+		</li>
+		<li>
+			<drug>CKT_Wine_IrishRose</drug>
+			<allowedForJoy>true</allowedForJoy>
+		</li>
+		<li>
+			<drug>CKT_Edibles</drug>
+			<allowedForJoy>true</allowedForJoy>
+        </li>
+		<li>
+			<drug>CKT_Burned_Vape</drug>
+			<allowedForJoy>true</allowedForJoy>
+        </li>
+	  </value>
+	</Operation>
+	
+</Patch>

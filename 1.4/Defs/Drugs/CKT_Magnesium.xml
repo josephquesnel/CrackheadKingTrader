@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>  
+  <ThingDef ParentName="DrugPillBase">
+    <defName>CKT_Magnesium_Pill</defName>
+    <label>magnesium sulfate</label>
+    <description>A supplimental pill containing magnesium sulfate, which is a form of salt containing sulphur and magnesium. Magnesium is the twelfth element on the Periodic Table and occurs naturally as a shiny, grey, metallic alloy. As a drug, magnesium sulfate (chemical MgSO4) is also known as Epsom Salt. When administered every three days, magnesium sulfate helps make up for magnesium deficiencies in the blood stream, such as the deficiencies caused by alcohol abuse. As magnesium is essential to the function of most living organisms, a deficiency can cause detrimental health issues, like muscle aches. \n \n Provides an eight percent improvement to immunity gain speed.</description>
+    <descriptionHyperlinks>
+      <HediffDef>CKT_MagnesiumHigh</HediffDef>
+    </descriptionHyperlinks>
+    <possessionCount>16</possessionCount>
+    <graphicData>
+      <texPath>Things/Item/Drug/WakeUp</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+	  <color>(188, 72, 188)</color>
+	  <drawSize>0.5</drawSize>
+    </graphicData>
+    <equippedAngleOffset>-150</equippedAngleOffset>
+    <rotatable>false</rotatable>
+    <stackLimit>25</stackLimit>
+    <statBases>
+      <MarketValue>18</MarketValue>
+      <Mass>0.025</Mass>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <ingestible>
+      <foodType>Processed</foodType>
+      <nurseable>true</nurseable>
+      <drugCategory>Medical</drugCategory>
+      <ingestSound>Ingest_Pill</ingestSound>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.18,0,0)</offset>
+        </northDefault>
+      </ingestHoldOffsetStanding>
+      <ingestCommandString>Swallow {0}</ingestCommandString>
+      <ingestReportString>Swallowing {0}.</ingestReportString>
+      <chairSearchRadius>25</chairSearchRadius>
+      <canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+      <tableDesired>false</tableDesired>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>CKT_MagnesiumHigh</hediffDef>
+          <severity>1.0</severity>
+		  <toleranceChemical>CKT_Magnesium</toleranceChemical>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+	<thingCategories Inherit="False">
+		<li>Medicine</li>
+		<li>Drugs</li>
+		<li>TSP_CKT_Drugs</li>
+	</thingCategories>
+	<comps>
+      <li Class="CompProperties_Drug">
+        <chemical>CKT_Magnesium</chemical>
+        <addictiveness>0</addictiveness>
+		<minToleranceToAddict>1</minToleranceToAddict>
+        <isCombatEnhancingDrug>false</isCombatEnhancingDrug>
+		<listOrder>223</listOrder>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <HediffDef>
+    <defName>CKT_MagnesiumHigh</defName>
+    <label>magnesium sulfate supplements</label>
+    <labelNoun>supplemented by magnesium sulfate</labelNoun>
+    <description>Magnesium sulfate is used to restore magnesium depletion, suppliment immune function, and ease muscle pains.</description>
+    <hediffClass>Hediff_High</hediffClass>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>2.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.331</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+      <stages>
+		<li>
+          <statOffsets>
+			<ImmunityGainSpeed>0.08</ImmunityGainSpeed>
+		  </statOffsets>
+        </li>
+      </stages>
+  </HediffDef>
+  
+  <ChemicalDef>
+    <defName>CKT_Magnesium</defName>
+    <label>supplimentary magnesium</label>
+	<addictionHediff>CKT_MagnesiumAddiction</addictionHediff>
+  </ChemicalDef>
+  
+  <HediffDef ParentName="AddictionBase">
+    <defName>CKT_MagnesiumAddiction</defName>
+    <label>Blessings from Fufulog!</label>
+    <description>An addiction to magnesium suppliments. Mild and wears away quickly. Easter Egg blessings from Fufulog to you! \n \n "Love you /b/ros, I hate THE LEAF, screw the Euro-poors, and a big shout out to my boy, Burialgoods, for that pure tasty existential dread. This is Fufulog's Mod, so he has the authority from Randy Random himself to bless you. \n \n "I dont make the rules, I just get raided by them."</description>
+    <hediffClass>Hediff_Addiction</hediffClass>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-12.0</severityPerDay>
+        <showDaysToRecover>true</showDaysToRecover>
+      </li>
+    </comps>
+  </HediffDef>
+  
+  <ThoughtDef>
+    <defName>CKT_MagnesiumHigh</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>CKT_MagnesiumHigh</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>supplemented by magnesium sulfate</label>
+        <description>My grandmother swears by this drug!</description>
+        <baseMoodEffect>2</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+  
+</Defs>

@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+  <ThingDef ParentName="ApparelBase">
+    <defName>CKT_Tape_Measure</defName>
+    <label>thirty foot tape measure</label>
+    <description>A slightly rusted thirty foot (9.114 meters) tape measure with the first foot completely unreadable. Increases construction speed when equipped in the utility slot.</description>
+    <thingClass>Apparel</thingClass>
+    <graphicData>
+      <texPath>Crackhead_King_Trader/Tape_Measure</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tickerType>Normal</tickerType>
+    <techLevel>Industrial</techLevel>
+    <statBases>
+      <Mass>0.5</Mass>
+      <WorkToMake>1400</WorkToMake>
+      <Flammability>0</Flammability>
+      <EquipDelay>2</EquipDelay>
+    </statBases>
+    <thingSetMakerTags>
+      <li>RewardStandardQualitySuper</li>
+    </thingSetMakerTags>
+    <costStuffCount>20</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <equippedStatOffsets>
+      <ConstructionSpeedFactor>1.2</ConstructionSpeedFactor>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>ApparelUtility</li>
+    </thingCategories>
+	<smeltable>false</smeltable>
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <careIfWornByCorpse>false</careIfWornByCorpse>
+      <careIfDamaged>false</careIfDamaged>
+      <wearPerDay>0</wearPerDay>
+      <bodyPartGroups>
+        <li>Waist</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Belt</li>
+      </layers>
+      <tags>
+        <li>BeltDefense</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+		<li>Slave</li>
+      </defaultOutfitTags>
+      <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+    </apparel>
+    <allowedArchonexusCount>1</allowedArchonexusCount>
+	<comps>
+	  <li Class="VFECore.CompProperties_ApparelHediffs" MayRequire="oscarpotocki.vanillafactionsexpanded.core">
+	    <hediffDefnames MayRequire="oscarpotocki.vanillafactionsexpanded.core">
+			<li MayRequire="oscarpotocki.vanillafactionsexpanded.core">CKT_HasTapeMeasureHediff</li>
+	    </hediffDefnames>
+	  </li>
+	</comps>
+  </ThingDef>
+  
+  <HediffDef>
+	<defName>CKT_HasTapeMeasureHediff</defName>
+	<label>using tape measure</label>
+	<labelNoun>a tape measure used</labelNoun>
+	<description>Although this tape measure is worn, it makes all construction noticably faster.</description>
+	<descriptionHyperlinks>
+	  <ThingDef>CKT_Tape_Measure</ThingDef>
+	</descriptionHyperlinks>
+	<hediffClass>Hediff_Hangover</hediffClass>
+	<isBad>false</isBad>
+	<initialSeverity>1</initialSeverity>
+	<stages>
+	  <li>
+		<statOffsets>
+	  	  <ConstructionSpeedFactor>1.2</ConstructionSpeedFactor>
+		</statOffsets>
+	  </li>
+	</stages>
+  </HediffDef>
+  
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>CKT_Burned_Glove</defName>
+    <label>glove (burned)</label>
+    <description>Two burnt gloves. Smells funky. Not the easiest to do work with but excellent heat resistance.</description>
+    <graphicData>
+      <texPath>Crackhead_King_Trader/Gloves</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costStuffCount>40</costStuffCount>
+    <stuffCategories>
+      <li>Leathery</li>
+    </stuffCategories>
+    <thingCategories>
+		<li MayRequire="vanillaexpanded.vappe">VAE_BootsAndGloves</li>
+		<li>ApparelMisc</li>
+    </thingCategories>
+	<techLevel>Industrial</techLevel>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToMake>400</WorkToMake>
+      <Mass>0.0421</Mass>
+	  <Flammability>0</Flammability>
+      <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.6</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.9</StuffEffectMultiplierInsulation_Heat>
+	  <ArmorRating_Heat>18</ArmorRating_Heat>
+      <EquipDelay>2</EquipDelay>
+    </statBases>
+	<equippedStatOffsets>
+      <WorkSpeedGlobal>-0.05</WorkSpeedGlobal>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>Hands</li>
+      </bodyPartGroups>
+      <layers>
+        <li>OnSkin</li>
+      </layers>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+	  <tags>
+			<li>IndustrialBasic</li>
+			<li>RWPBanditWear</li>
+			<li>CallOfCthulhu_Rancher</li>
+			<li>CallOfCthulhu_Farmer</li>
+			<li>CallOfCthulhu_Butcher</li>
+			<li>CallOfCthulhu_Thug</li>
+			<li>CallOfCthulhu_Townsfolk</li>
+			<li>klan_apparel</li>
+			<li>MedievalPeasant</li>
+			<li>mafia_survetement</li>
+			<li>mafia</li>
+			<li>HippieBasic</li>
+			<li>Usa</li>
+			<li>SurvivalistWear</li>
+			<li>HarrierWear</li>
+			<li>PoorPirate</li>
+	  </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+		<li>Soldier</li>
+		<li>Slave</li>
+      </defaultOutfitTags>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_StandardApparel"></colorGenerator>
+		<recipeMaker>
+			<displayPriority>265</displayPriority>
+			<recipeUsers Inherit="False">
+				<li>ElectricTailoringBench</li>
+				<li>HandTailoringBench</li>
+				<li>CraftingSpot</li>
+			</recipeUsers>
+		</recipeMaker>
+    <tradeTags>
+      <li>BasicClothing</li>
+    </tradeTags>
+  </ThingDef>
+  
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>CKT_Socks</defName>
+    <label>socks (funky)</label>
+    <description>A pair of worn out socks. It cannot be discerned if the pattern is intentional or the result of stains from unwashed feet.</description>
+    <graphicData>
+      <texPath>Crackhead_King_Trader/Socks</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costStuffCount>20</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+	  <li>Leathery</li>
+    </stuffCategories>
+    <thingCategories>
+		<li MayRequire="vanillaexpanded.vappe">VAE_BootsAndGloves</li>
+      <li>ApparelMisc</li>
+    </thingCategories>
+	<techLevel>Medieval</techLevel>
+    <statBases>
+		<MarketValue>12</MarketValue>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToMake>200</WorkToMake>
+      <Mass>0.01</Mass>
+      <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.44</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.2</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>2</EquipDelay>
+    </statBases>
+    <apparel>
+      <bodyPartGroups>
+        <li>Feet</li>
+      </bodyPartGroups>
+      <layers>
+        <li>OnSkin</li>
+      </layers>
+      <tags>
+			<li>Tribal</li>
+			<li>WoodBeetWear</li>
+			<li>SurvivalistWear</li>
+			<li>HarrierWear</li>
+			<li>PoorPirate</li>
+			<li>NormalPirate</li>
+			<li>CartelmanWear</li>
+			<li>JeubWear</li>
+			<li>GoblinWear</li>
+			<li>KhajiitWear</li>
+			<li>klan_apparel</li>
+			<li>RWPBanditWear</li>
+			<li>CallOfCthulhu_Thug</li>
+			<li>HippieBasic</li>
+      </tags>
+      <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+	  <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+      <defaultOutfitTags>
+		<li>Slave</li>
+      </defaultOutfitTags>
+    </apparel>
+		<recipeMaker>
+			<displayPriority>265</displayPriority>
+			<recipeUsers Inherit="False">
+				<li>ElectricTailoringBench</li>
+				<li>HandTailoringBench</li>
+				<li>CraftingSpot</li>
+			</recipeUsers>
+		</recipeMaker>
+    <colorGenerator Class="ColorGenerator_StandardApparel" />
+    <tradeTags>
+      <li>BasicClothing</li>
+    </tradeTags>
+  </ThingDef>
+  
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>CKT_Shoes</defName>
+    <label>dusty shoes</label>
+    <description>A pair of shoes. They look used but are actually brand new. Could probably run a bit faster with shoes on.</description>
+    <graphicData>
+      <texPath>Crackhead_King_Trader/Shoes</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costStuffCount>40</costStuffCount>
+    <stuffCategories>
+		<li>Fabric</li>
+		<li>Leathery</li>
+    </stuffCategories>
+    <thingCategories>
+		<li MayRequire="vanillaexpanded.vappe">VAE_BootsAndGloves</li>
+		<li>ApparelMisc</li>
+    </thingCategories>
+	<techLevel>Medieval</techLevel>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToMake>550</WorkToMake>
+      <Mass>0.1</Mass>
+      <StuffEffectMultiplierArmor>0.33</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.2</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.2</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>2</EquipDelay>
+    </statBases>
+	<equippedStatOffsets>
+      <MoveSpeed>0.3</MoveSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>Feet</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Middle</li>
+      </layers>
+      <tags>
+			<li>IndustrialBasic</li>
+			<li>IndustrialAdvanced</li>
+			<li>IndustrialMilitaryBasic</li>
+			<li>IndustrialMilitary</li>
+			<li>ST_GnomeClothing</li>
+			<li>ST_BeetClothing</li>
+			<li>BeetWear</li>
+			<li>JeubWear</li>
+			<li>SurvivalistWear</li>
+			<li>SK_Khan_Apparel_Tag</li>
+			<li>Usa</li>
+			<li>HippieBasic</li>
+			<li>RWPWesternWear</li>
+			<li>RWPBanditWear</li>
+			<li>CallOfCthulhu_Rancher</li>
+			<li>CallOfCthulhu_Farmer</li>
+			<li>CallOfCthulhu_Butcher</li>
+			<li>klan_apparel</li>
+			<li>SurvivalistWear</li>
+			<li>HarrierWear</li>
+			<li>PoorPirate</li>
+			<li>NormalPirate</li>
+			<li>CartelmanWear</li>
+			<li>GoblinWear</li>
+			<li>KhajiitWear</li>
+			<li>klan_apparel</li>
+			<li>mafia_survetement</li>
+			<li>mafia</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+		<li>Soldier</li>
+		<li>Slave</li>
+      </defaultOutfitTags>
+	  <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+      <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+    </apparel>
+		<recipeMaker>
+			<displayPriority>265</displayPriority>
+			<recipeUsers Inherit="False">
+				<li>ElectricTailoringBench</li>
+				<li>HandTailoringBench</li>
+				<li>CraftingSpot</li>
+			</recipeUsers>
+		</recipeMaker>
+    <colorGenerator Class="ColorGenerator_StandardApparel"></colorGenerator>
+    <tradeTags>
+      <li>BasicClothing</li>
+    </tradeTags>
+  </ThingDef>
+  
+</Defs>
