@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<ThingDef Name="TSP_CKT_DrugBase" ParentName="DrugBase" Abstract="True">
+		<statBases>
+			<Nutrition>0.1</Nutrition>
+			<FoodPoisonChance>0.02</FoodPoisonChance>
+		</statBases>
+		<ingestible>
+			<preferability>NeverForNutrition</preferability>
+			<foodType>Processed, Fluid, Liquor</foodType>
+			<joyKind>TSP_CKT_Drugs_Classification</joyKind>
+			<canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+			<tableDesired>false</tableDesired>
+			<maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+		</ingestible>
+		<techLevel>Industrial</techLevel>
+		<thingCategories Inherit="False">
+			<li>TSP_CKT_Drugs</li>
+		</thingCategories>
+		<comps>
+			<li Class="CompProperties_FoodPoisonable"></li>
+			<li Class="CompProperties_Ingredients">
+				<splitTransferableFoodKind>false</splitTransferableFoodKind>
+				<noIngredientsFoodKind>NonMeat</noIngredientsFoodKind>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingSetMakerDef>
+		<defName>TSP_CKT_LootMarker</defName>
+		<root Class="ThingSetMaker_MarketValue">
+			<fixedParams>
+				<filter>
+					<categories>
+						<li MayRequire="vanillaexpanded.vcooke">VCE_Cheese</li>
+					</categories>
+					<thingDefs>
+						<li>SmokeleafLeaves</li>
+						<li>SmokeleafJoint</li>
+						<li>PsychoidLeaves</li>
+						<li>Flake</li>
+						<li>Yayo</li>
+						<li>Beer</li>
+						<li>CKT_Laced_Bentanal</li>
+						<li>CKT_Baderall_Pills</li>
+						<li>CKT_Beer_SteelyReserve</li>
+						<li>CKT_Beer_OldEnglish</li>
+						<li>CKT_Wine_Puckfast</li>
+						<li>CKT_Wine_IrishRose</li>
+						<li>CKT_Bottled_Water</li>
+						<li>CKT_Spray_Paint_Can</li>
+						<li>CKT_Profen_Pill</li>
+						<li>CKT_Magnesium_Pill</li>
+						<li>CKT_Edibles</li>
+						<li>CKT_Burned_Vape</li>
+						<li>CKT_Blue_Wide_Cigarettes</li>
+						<li>CKT_Bagged_Cigarettes</li>
+						<li>CKT_8ball_Chew</li>
+						<li>CKT_Rimworlds_Best</li>
+						<li>CKT_Gamblers_Pipe_Tobacco</li>
+						<li>CKT_Whippet_Canister</li>
+						<li>CKT_Can_Of_Death</li>
+						<li>CKT_Video_Game_Neurostimulator</li>
+						<li>CKT_Country_Music</li>
+						<li>CKT_Dog_Bowl</li>
+						<li>CKT_Chemfuel_Tank</li>
+						<li>CKT_BumpBox</li>
+						<li>CKT_1984_MonteCarlo</li>
+						<li>CKT_Terry</li>
+						<li>CKT_GammaMax</li>
+						<li>CKT_Strange_Glowing_Thing</li>
+						<li>CKT_Tape_Measure</li>
+						<li>CKT_Burned_Glove</li>
+						<li>CKT_Socks</li>
+						<li>CKT_Shoes</li>
+						<li>CKT_Drill_Press_Chuck</li>
+						<li>CKT_Dumbell</li>
+						<li>CKT_Random_Junk</li>
+						<li>CKT_Gun_Aurus_Judge</li>
+						<li>CKT_Copper_Pipe</li>
+						<li>CKT_Impact_Driver</li>
+						<li>CKT_Glow_Stick</li>
+						<li>CKT_EggTrogloditeUnfertilized</li>
+						<li>CKT_EggTrogloditeFertilized</li>
+						<li>CKT_RedBowl</li>
+						<li>CKT_Burrito</li>
+						<li MayRequire="zal.smokeweave">Smokeweave</li>
+						<li MayRequire="wasscreefted.smokeleafexpanded">CRFT_SmokeleafTea</li>
+						<li MayRequire="wasscreefted.smokeleafexpanded">CRFT_SmokeleafBong</li>
+						<li MayRequire="wasscreefted.smokeleafexpanded">CRFT_SmokeleafBlunt</li>
+						<li MayRequire="wasscreefted.smokeleafexpanded">CRFT_SmokeleafBeer</li>
+						<li MayRequire="wasscreefted.smokeleafexpanded">CRFT_LacedJointFlake</li>
+						<li MayRequire="wasscreefted.smokeleafexpanded">CRFT_LacedJointYayo</li>
+						<li MayRequire="wasscreefted.smokeleafexpanded">CRFT_LacedJointLuciferium</li>
+						<li MayRequire="wasscreefted.smokeleafexpanded,oskarpotocki.vfe.insectoid">CRFT_LacedJointRoyalInsectJelly</li>
+						<li MayRequire="wasscreefted.smokeleafexpanded">CRFT_SmokeleafChocolate</li>
+						<li MayRequire="wasscreefted.smokeleafexpanded">CRFT_SmokeleafVape</li>
+					</thingDefs>
+				</filter>
+			</fixedParams>
+		</root>
+	</ThingSetMakerDef>
+</Defs>

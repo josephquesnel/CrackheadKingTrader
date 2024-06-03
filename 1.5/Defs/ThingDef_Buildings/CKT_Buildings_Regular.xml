@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+  <ThingDef ParentName="BuildingBase">
+	<defName>CKT_Dog_Bowl</defName>
+    <label>pet bowl</label>
+	<description>A worn, scratched, dirty food bowl that can hold a comically large amount of kibble. It holds so much kibble, in fact, that scientists who have studied it think it might involve Glitter World Tech. How did it end up here?</description>
+    <graphicData>
+      <texPath>Things/Building/Furniture/PlantPot</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(1,1)</drawSize>
+    </graphicData>
+	<thingCategories>
+      <li>BuildingsSpecial</li>
+    </thingCategories>
+	<minifiedDef>MinifiedThing</minifiedDef>
+	<techLevel>Ultra</techLevel>
+	<uiIconScale>0.5</uiIconScale>
+    <costStuffCount>10</costStuffCount>
+    <thingClass>Building_Storage</thingClass>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.4</fillPercent>
+    <castEdgeShadows>true</castEdgeShadows>
+    <pathCost>5</pathCost>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <statBases>
+	  <MaxHitPoints>100</MaxHitPoints> 
+      <Mass>4</Mass>
+      <WorkToBuild>250</WorkToBuild>
+      <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">2.5</StyleDominance>
+      <Flammability>0.0</Flammability>
+      <Beauty>1.5</Beauty>
+    </statBases>
+	<size>(1,1)</size>
+    <building>
+		<fixedStorageSettings>
+			<filter>
+				<disallowNotEverStorable>false</disallowNotEverStorable>
+				<thingDefs>
+					<li>Kibble</li>
+				</thingDefs>
+			</filter>
+		</fixedStorageSettings>
+		<defaultStorageSettings>
+			<priority>Critical</priority>
+			<filter>
+				<thingDefs>
+					<li>Kibble</li>
+				</thingDefs>
+			</filter>
+		</defaultStorageSettings>
+      <preventDeteriorationOnTop>true</preventDeteriorationOnTop>
+      <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+      <maxItemsInCell>15</maxItemsInCell>
+      <blueprintClass>Blueprint_Storage</blueprintClass>
+      <paintable>true</paintable>
+	  <isHopper>True</isHopper>
+    </building>
+    <inspectorTabs>
+      <li>ITab_Storage</li>
+    </inspectorTabs>
+    <staticSunShadowHeight>0.5</staticSunShadowHeight>
+    <surfaceType>Item</surfaceType>
+    <canOverlapZones>false</canOverlapZones>
+    <comps>
+		<!-- Code courtesy of the Fridges Are Hopper Mod: https://www.steamcommunity.com/sharedfiles/filedetails/?id=2894860548 -->
+		<li Class="CompProperties_Styleable"></li>
+		<li Class="VNPE.CompProperties_RegisterToGrinder" MayRequire="vanillaexpanded.vnutriente"></li>
+    </comps>
+	<designationHotKey>Misc12</designationHotKey>
+  </ThingDef>
+  
+  <ThingDef ParentName="BuildingBase">
+	<defName>CKT_Chemfuel_Tank</defName>
+    <label>chemfuel tank</label>
+	<description>An empty canister for pumping chemfuel. Stores about twelve stacks. Place in an open and dry place.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Chemfuel</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(1,1)</drawSize>
+    </graphicData>
+	<thingCategories>
+		<li MayRequire="dubwise.rimefeller">Oil</li>
+		<li>BuildingsSpecial</li>
+    </thingCategories>
+	<minifiedDef>MinifiedThing</minifiedDef>
+	<uiIconScale>0.5</uiIconScale>
+    <costStuffCount>10</costStuffCount>
+    <thingClass>Building_Storage</thingClass>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.4</fillPercent>
+    <castEdgeShadows>true</castEdgeShadows>
+    <pathCost>50</pathCost>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <statBases>
+	  <MaxHitPoints>100</MaxHitPoints> 
+      <Mass>4</Mass>
+      <WorkToBuild>250</WorkToBuild>
+      <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">2.5</StyleDominance>
+      <Flammability>5</Flammability>
+      <Beauty>0</Beauty>
+    </statBases>
+	<size>(1,1)</size>
+    <building>
+      <fixedStorageSettings>
+        <filter>
+          <disallowNotEverStorable>true</disallowNotEverStorable>
+			<thingDefs>
+				<li>Chemfuel</li>
+				<li MayRequire="Ludeon.RimWorld.Biotech">Wastepack</li>
+			</thingDefs>
+        </filter>
+      </fixedStorageSettings>
+      <defaultStorageSettings>
+        <priority>Critical</priority>
+        <filter>
+          <thingDefs>
+			<li>Chemfuel</li>
+		  </thingDefs>
+        </filter>
+      </defaultStorageSettings>
+      <preventDeteriorationOnTop>true</preventDeteriorationOnTop>
+      <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+      <maxItemsInCell>12</maxItemsInCell>
+      <blueprintClass>Blueprint_Storage</blueprintClass>
+      <paintable>false</paintable>
+    </building>
+    <inspectorTabs>
+      <li>ITab_Storage</li>
+    </inspectorTabs>
+    <staticSunShadowHeight>0.5</staticSunShadowHeight>
+    <surfaceType>Item</surfaceType>
+    <canOverlapZones>false</canOverlapZones>
+    <comps>
+      <li Class="CompProperties_Styleable"></li>
+		<li Class="Rimefeller.CompProperties_FuelPump" MayRequire="dubwise.rimefeller">
+			<pumpRate MayRequire="dubwise.rimefeller">10</pumpRate>
+		</li>
+    </comps>
+	<designationHotKey>Misc12</designationHotKey>
+  </ThingDef>
+  
+  <ThingDef ParentName="BuildingBase">
+	<defName>CKT_BumpBox</defName>
+    <label>bump box</label>
+	<description>"this is where the magic happens." \n \n The name "bump box" is baffling. Over the millinea, it has refered to boxes of vehicle bumpers, a subscription service for pregnant humans, and so much more. \n What is known, though, is precisely what this bump box does. Drugs. So. Much. Drugs. (Holds about seven stacks.)</description>
+    <graphicData>
+      <texPath>Crackhead_King_Trader/Bump_Box</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(0.8,0.8)</drawSize>
+    </graphicData>
+	<thingCategories>
+      <li>BuildingsSpecial</li>
+    </thingCategories>
+	<minifiedDef>MinifiedThing</minifiedDef>
+	<uiIconScale>0.5</uiIconScale>
+    <costStuffCount>10</costStuffCount>
+    <thingClass>Building_Storage</thingClass>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.4</fillPercent>
+    <castEdgeShadows>true</castEdgeShadows>
+    <pathCost>50</pathCost>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <statBases>
+	  <MaxHitPoints>100</MaxHitPoints> 
+      <Mass>4</Mass>
+      <WorkToBuild>250</WorkToBuild>
+      <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">2.5</StyleDominance>
+      <Flammability>0.0</Flammability>
+      <Beauty>1.5</Beauty>
+    </statBases>
+	<size>(1,1)</size>
+    <building>
+      <fixedStorageSettings>
+        <filter>
+          <disallowNotEverStorable>false</disallowNotEverStorable>
+          <categories>
+            <li>Drugs</li>
+			<li>Medicine</li>
+          </categories>
+          <thingDefs>
+            <li MayRequire="Ludeon.RimWorld.Biotech">Wastepack</li>
+          </thingDefs>
+        </filter>
+      </fixedStorageSettings>
+      <defaultStorageSettings>
+        <priority>Critical</priority>
+        <filter>
+          <categories>
+            <li>Drugs</li>
+          </categories>
+        </filter>
+      </defaultStorageSettings>
+      <preventDeteriorationOnTop>false</preventDeteriorationOnTop>
+      <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+      <maxItemsInCell>7</maxItemsInCell>
+      <blueprintClass>Blueprint_Storage</blueprintClass>
+      <paintable>true</paintable>
+    </building>
+    <inspectorTabs>
+      <li>ITab_Storage</li>
+    </inspectorTabs>
+    <staticSunShadowHeight>0.5</staticSunShadowHeight>
+    <surfaceType>Item</surfaceType>
+    <canOverlapZones>false</canOverlapZones>
+    <comps>
+      <li Class="CompProperties_Styleable"></li>
+    </comps>
+	<designationHotKey>Misc12</designationHotKey>
+  </ThingDef>
+  
+  <ThingDef ParentName="SteleBase" Name="CKT_SculptureBase" Abstract="True">
+	<thingClass>Building_Art</thingClass>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsArt</li>
+    </thingCategories>
+    <thingSetMakerTags>
+		<li>RewardStandardLowFreq</li>
+	</thingSetMakerTags>
+    <statBases>
+      <SellPriceFactor>1.21</SellPriceFactor>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Art">
+        <nameMaker>NamerArtSculpture</nameMaker>
+        <descriptionMaker>ArtDescription_Sculpture</descriptionMaker>
+        <canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
+		<minQualityForArtistic>Awful</minQualityForArtistic>
+      </li>
+    </comps>
+	<researchPrerequisites>
+		<li>Stonecutting</li>
+	</researchPrerequisites>
+    <placeWorkers>
+      <li>PlaceWorker_MeditationOffsetBuildingsNear</li>
+    </placeWorkers>
+    <tradeTags>
+      <li>Art</li>
+    </tradeTags>
+    <ideoBuildingNamerBase MayRequire="Ludeon.RimWorld.Ideology">NamerIdeoSculpture</ideoBuildingNamerBase>
+    <building>
+      <paintable>true</paintable>
+    </building>
+  </ThingDef>
+  
+  <ThingDef ParentName="CKT_SculptureBase">
+    <defName>CKT_1984_MonteCarlo</defName>
+    <label>Monte Carlo car statue</label>
+    <description>"yea thats my whip, aint she sweet?" \n \n A huge sculpture depicting the Chevrolet 1984 Monte Carlo, a coupe automobile once produced thousands of years ago. What awe could such an ancient, primitive passenger car inspire that makes it still worthy of reverence, and beautiful sculptures, this long after its release? \n Obviously, this was one absolutely banging vehicle. (Caution: may summon lot lizards.)</description>
+    <castEdgeShadows>true</castEdgeShadows>
+    <graphicData>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <texPath>Crackhead_King_Trader/1984_Monte_Carlo</texPath>
+      <drawSize>(4,4)</drawSize>
+    </graphicData>
+    <fillPercent>0.5</fillPercent>
+    <rotatable>false</rotatable>
+    <size>(2,2)</size>
+    <canOverlapZones>false</canOverlapZones>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Beauty>1000</Beauty>
+      <Mass>28</Mass>
+      <WorkToMake>110000</WorkToMake>
+      <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">40</StyleDominance>
+    </statBases>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+  </ThingDef>
+  
+  <ThingDef ParentName="CKT_SculptureBase">
+    <defName>CKT_Terry</defName>
+    <label>terry fargo mclean the 7th</label>
+    <description>"Terry Fargo McLean The 7th. Last of his name and greatest in fame baby." \n \n A statue honoring a base line human from an unknown, bygone era. Other than his appearance being memorialized in artistic form, nothing is known about the man, why his bloodline died out, or what makes him the greatest of his family.</description>
+    <graphicData>
+      <graphicClass>Graphic_Random</graphicClass>
+      <texPath>Things/Building/Art/SculptureSmall</texPath>
+    </graphicData>
+    <fillPercent>0.35</fillPercent>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MaxHitPoints>90</MaxHitPoints>
+      <Mass>3</Mass>
+      <Beauty>200</Beauty>
+      <WorkToMake>28000</WorkToMake>
+      <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">10</StyleDominance>
+    </statBases>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+  </ThingDef>
+  
+</Defs>
