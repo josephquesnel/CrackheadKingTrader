@@ -65,6 +65,8 @@
     </tradeTags>
   </ThingDef>
   
+  
+  <!--
   <ThoughtDef>
     <defName>CKT_GammaMaxSoothe</defName>
     <workerClass>CrackheadKingTrader.ThoughtWorker_GammaMax_Soothe</workerClass>
@@ -78,11 +80,12 @@
       </li>
     </stages>
   </ThoughtDef>
+  -->
 
   <ThingDef ParentName="BuildingBase">
     <defName>CKT_Strange_Glowing_Thing</defName>
     <label>strange glowing thing</label>
-    <description>"Its name is Jamey, Jamey is hot, its right behind us!" \n \n A strange glowing thing emanating profound power fluctuations. Much like Vanometric Cells, the means by which it draws unlimmited energy is unknown to science.</description>
+    <description>"Its name is Jamey, Jamey is hot, its right behind us!" \n \n A strange glowing thing emanating profound power fluctuations. Much like Vanometric Cells, the means by which it draws unlimited energy is unknown to science.</description>
     <graphicData>
       <texPath>Things/Building/Special/VanometricPowerCell</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
