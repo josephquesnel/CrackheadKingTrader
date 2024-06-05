@@ -230,19 +230,32 @@
   <ThingDef ParentName="SteleBase" Name="CKT_SculptureBase" Abstract="True">
 	<thingClass>Building_Art</thingClass>
     <minifiedDef>MinifiedThing</minifiedDef>
+	<graphicData>
+		<shadowData>
+			<volume>(1.5, 0.6, 1.5)</volume>
+			<offset>(0, 0, -0.15)</offset>
+		</shadowData>
+		<damageData>
+			<rect>(0.1,0.1,1.9,1.9)</rect>
+		</damageData>
+	</graphicData>
+    <inspectorTabs Inherit="False">
+      <li>ITab_Art</li>
+    </inspectorTabs>
     <thingCategories>
       <li>BuildingsArt</li>
     </thingCategories>
     <thingSetMakerTags>
 		<li>RewardStandardLowFreq</li>
 	</thingSetMakerTags>
+	<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <statBases>
       <SellPriceFactor>1.21</SellPriceFactor>
     </statBases>
-    <comps>
+    <comps Inherit="False">
       <li Class="CompProperties_Art">
         <nameMaker>NamerArtSculpture</nameMaker>
-        <descriptionMaker>ArtDescription_Sculpture</descriptionMaker>
+        <descriptionMaker>ArtDescription_Furniture</descriptionMaker>
         <canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
 		<minQualityForArtistic>Awful</minQualityForArtistic>
       </li>
@@ -250,9 +263,7 @@
 	<researchPrerequisites>
 		<li>Stonecutting</li>
 	</researchPrerequisites>
-    <placeWorkers>
-      <li>PlaceWorker_MeditationOffsetBuildingsNear</li>
-    </placeWorkers>
+    <placeWorkers></placeWorkers>
     <tradeTags>
       <li>Art</li>
     </tradeTags>
@@ -264,7 +275,7 @@
   
   <ThingDef ParentName="CKT_SculptureBase">
     <defName>CKT_1984_MonteCarlo</defName>
-    <label>Monte Carlo car statue</label>
+    <label>Monte Carlo car stele</label>
     <description>"yea thats my whip, aint she sweet?" \n \n A huge sculpture depicting the Chevrolet 1984 Monte Carlo, a coupe automobile once produced thousands of years ago. What awe could such an ancient, primitive passenger car inspire that makes it still worthy of reverence, and beautiful sculptures, this long after its release? \n Obviously, this was one absolutely banging vehicle. (Caution: may summon lot lizards.)</description>
     <castEdgeShadows>true</castEdgeShadows>
     <graphicData>
@@ -278,7 +289,7 @@
     <canOverlapZones>false</canOverlapZones>
     <statBases>
       <MaxHitPoints>300</MaxHitPoints>
-      <Beauty>1000</Beauty>
+      <Beauty>250</Beauty>
       <Mass>28</Mass>
       <WorkToMake>110000</WorkToMake>
       <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">40</StyleDominance>
@@ -292,7 +303,7 @@
   
   <ThingDef ParentName="CKT_SculptureBase">
     <defName>CKT_Terry</defName>
-    <label>terry fargo mclean the 7th</label>
+    <label>Terry Fargo McLean VII</label>
     <description>"Terry Fargo McLean The 7th. Last of his name and greatest in fame baby." \n \n A statue honoring a base line human from an unknown, bygone era. Other than his appearance being memorialized in artistic form, nothing is known about the man, why his bloodline died out, or what makes him the greatest of his family.</description>
     <graphicData>
       <graphicClass>Graphic_Random</graphicClass>

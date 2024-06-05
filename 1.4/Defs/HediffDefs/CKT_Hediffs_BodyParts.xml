@@ -15,7 +15,8 @@
       <color>(189,219,118)</color>
     </graphicData>
     <techHediffsTags>
-      <li>Advanced</li>
+		<li>CrackHeadKing</li>
+		<li>Advanced</li>
     </techHediffsTags>
     <statBases>
       <WorkToMake>26000</WorkToMake>
@@ -28,7 +29,7 @@
     <defName>CKT_Video_Game_Neurostimulator</defName>
     <label>video game neuro-stimulator</label>
     <labelNoun>a video game neuro-stimulator</labelNoun>
-    <description>A neuro-stimulator with the latest version of Cod Modern Fishing Simulator installed. Players can, at any time, access the game with a direct neural interface, totally immersing themselves into the peaceful, serene lake shore, casting their troubles and hook away. With its biogel nerve-link, internal signal pre-processor, and wide-spectrum sensors, this eye implant neurostimulator is better than all alphabet box game systems combined.</description>
+    <description>A neuro-stimulator with the latest version of Cod Modern Fishing Simulator installed. Players can, at any time, access the game with a direct neural interface, totally immersing themselves into the peaceful, serene lake shore, casting their troubles and hook away. It is not only calming, it also hones depth perception and aiming! With its biogel nerve-link, internal signal pre-processor, and wide-spectrum sensors, this implant neurostimulator is better than all alphabet box game systems combined.</description>
     <descriptionHyperlinks>
 		<ThingDef>CKT_Video_Game_Neurostimulator</ThingDef>
 	</descriptionHyperlinks>
@@ -44,9 +45,13 @@
           </li>
         </capMods>
 		<statFactors>
-        </statFactors>
+			<DTVFE_FishingSpeed MayRequire="vanillaexpanded.vcef,delmaintweaks.vefishing">3</DTVFE_FishingSpeed>
+			<DTVFE_FishingYield MayRequire="vanillaexpanded.vcef,delmaintweaks.vefishing">1.1</DTVFE_FishingYield>
+		</statFactors>
 		<statOffsets>
 		  <ShootingAccuracyPawn>2</ShootingAccuracyPawn>
+		  <MentalBreakThreshold>-0.1</MentalBreakThreshold>
+		  <Comfort>0.01</Comfort>
 		</statOffsets>
       </li>
     </stages>
@@ -54,8 +59,8 @@
 
   <ThingDef ParentName="CKT_BodyPartBase">
     <defName>CKT_Video_Game_Neurostimulator</defName>
-    <label>video game neurostimulator</label>
-    <description>A neuro-stimulator with the latest version of Cod Modern Fishing Simulator installed. Players can, at any time, access the game with a direct neural interface, totally immersing themselves into the peaceful, serene lake shore, casting their troubles and hook away. With its biogel nerve-link, internal signal pre-processor, and wide-spectrum sensors, this eye implant neurostimulator is better than all alphabet box game systems combined.</description>
+    <label>fishing video game neuro-stimulator</label>
+    <description>A neuro-stimulator with the latest version of Cod Modern Fishing Simulator installed. Players can, at any time, access the game with a direct neural interface, totally immersing themselves into the peaceful, serene lake shore, casting their troubles and hooks away. With its biogel nerve-link, internal signal pre-processor, and wide-spectrum sensors, this implant neuro-stimulator is better than all alphabet box game systems combined.</description>
     <descriptionHyperlinks><RecipeDef>CKT_Install_Video_Game_Neurostimulator</RecipeDef></descriptionHyperlinks>
     <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
     <statBases>
@@ -90,6 +95,7 @@
     </fixedIngredientFilter>
     <appliedOnFixedBodyParts>
       <li>Eye</li>
+	  <li>Brain</li>
     </appliedOnFixedBodyParts>
     <addsHediff>CKT_Video_Game_Neurostimulator</addsHediff>
   </RecipeDef>
@@ -103,8 +109,8 @@
     <stages>
       <li>
         <label>gone vidya fishing</label>
-        <description>Gone fishing, got my favorite pole, gone fishing, down by the swimming hole... I'm wishing, the world would let me be... and we could be together, fishing you and me!</description>
-        <baseMoodEffect>4</baseMoodEffect>
+        <description>Gone vidya fishing, got my favorite pole, gone vidya fishing, down my brain's swimming hole... I'm wishing, the world would let me be... and we could be together, fishing virtually!</description>
+        <baseMoodEffect>12</baseMoodEffect>
       </li>
     </stages>
   </ThoughtDef>
@@ -113,8 +119,8 @@
     <defName>CKT_Country_Music</defName>
     <label>country music neuro-stimulator implant (obscure)</label>
     <labelNoun>a neuro-stimulator implant with obscure country music</labelNoun>
-    <description>A neurostimulator with obscure country music written to it. When implanted, it allows the bearer to play millions of obscure and little-known songs from the country music genre, directly into the brain, with clarity akin to personally hearing the singer. It can be turned off or on, searched, and recalled at any time. \n Its library of albums runs the whole of the past three thousand six hundred years, from every culture of humanity and in every part of the galaxy, from Old Earth to the Core Worlds to the Galactic Rim. Makes you feel like a cowboy. You have no idea who the artists are but you swear you have heard them before.</description>
-	<descriptionShort>A neurostimulator with obscure country music written to it. When implanted, it allows the bearer to play millions of obscure and little-known songs from the country music genre, directly into the brain, with clarity akin to personally hearing the singer.</descriptionShort>
+    <description>A neurostimulator with obscure country music written to it. When implanted, it allows the bearer to play millions of obscure and little-known songs from the country music genre, directly into the brain, with clarity akin to personally hearing the singer. It can be turned off or on, searched, and recalled at any time. \n Its library of albums runs the whole of the past three thousand six hundred years of country music, from every culture of man and in every part of the galaxy, from Old Earth to the Core Worlds to the Galactic Rim. Makes the bearer feel like a cowboy.</description>
+	<descriptionShort>A neurostimulator with obscure country music written to it. When implanted, it allows the bearer to play millions of obscure and little-known songs from the country music genre at-will, directly into the brain, with clarity akin to personally hearing the singer.</descriptionShort>
     <descriptionHyperlinks><ThingDef>CKT_Country_Music</ThingDef></descriptionHyperlinks>
     <spawnThingOnRemoved>CKT_Country_Music</spawnThingOnRemoved>
 	<stages>
@@ -127,14 +133,17 @@
             <offset>0.30</offset>
           </li>
         </capMods>
+		<statOffsets>
+			<Comfort>0.05</Comfort>
+		</statOffsets>
       </li>
     </stages>
   </HediffDef>
 
   <ThingDef ParentName="CKT_BodyPartBase">
     <defName>CKT_Country_Music</defName>
-    <label>country music (obscure)</label>
-    <description>A neurostimulator with obscure country music written to it. When implanted, it allows the bearer to play millions of obscure and little-known songs from the country music genre, directly into the brain, with clarity akin to personally hearing the singer. It can be turned off or on, searched, and recalled at any time. \n Its library of albums runs the whole of the past three thousand six hundred years, from every culture of humanity and in every part of the galaxy, from Old Earth to the Core Worlds to the Galactic Rim. Makes you feel like a cowboy. You have no idea who the artists are but you swear you have heard them before.</description>
+    <label>country music neuro-stimulator implant (obscure)</label>
+    <description>A neurostimulator with obscure country music written to it. When implanted, it allows the bearer to play millions of obscure and little-known songs from the country music genre, directly into the brain, with clarity akin to personally hearing the singer. It can be turned off or on, searched, and recalled at any time. \n Its library of albums runs the whole of the past three thousand six hundred years, from every culture of humanity and in every part of the galaxy, from Old Earth to the Core Worlds to the Galactic Rim. Makes the bearer feel like a cowboy.</description>
     <descriptionHyperlinks><RecipeDef>CKT_Install_Country_Music</RecipeDef></descriptionHyperlinks>
     <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
     <statBases>
@@ -145,13 +154,13 @@
 
   <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
     <defName>CKT_Install_Country_Music</defName>
-    <label>install country music (obscure)</label>
+    <label>install country music implant (obscure)</label>
     <description>Install a neuro-stimulator broadcasting obscure country music into the brain.</description>
     <descriptionHyperlinks>
       <ThingDef>CKT_Country_Music</ThingDef>
       <HediffDef>CKT_Country_Music</HediffDef>
     </descriptionHyperlinks>
-    <jobString>Installing neurostimulator to bump wierd!</jobString>
+    <jobString>Installing neuro-stimulator to bump weird!</jobString>
     <ingredients>
       <li>
         <filter>
@@ -169,6 +178,7 @@
     </fixedIngredientFilter>
     <appliedOnFixedBodyParts>
       <li>Ear</li>
+	  <li>Brain</li>
     </appliedOnFixedBodyParts>
     <addsHediff>CKT_Country_Music</addsHediff>
   </RecipeDef>
@@ -181,9 +191,9 @@
     <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
     <stages>
       <li>
-        <label>delightful internal soundtrack (country, obscure)</label>
-        <description>Man this guy likes his truck.</description>
-        <baseMoodEffect>4</baseMoodEffect>
+        <label>delightful internal soundtrack (country music, obscure)</label>
+        <description>Man, this guy likes his truck. I have no idea who these artists are, but I swear that I have heard them before.</description>
+        <baseMoodEffect>11</baseMoodEffect>
       </li>
     </stages>
   </ThoughtDef>
