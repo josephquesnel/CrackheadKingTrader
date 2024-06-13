@@ -30,6 +30,12 @@
 			<categories>
 				<li>Corpses</li>
 			</categories>
+			<specialFiltersToAllow>
+				<li>AllowLargeCorpses</li>
+				<li>AllowCorpsesColonist</li>
+				<li>AllowRotten</li>
+				<li>AllowCorpsesStranger</li>
+			</specialFiltersToAllow>
 			<specialFiltersToDisallow Inherit="False">
 				<li>AllowFresh</li>
 			</specialFiltersToDisallow>
@@ -41,6 +47,12 @@
 			<specialFiltersToDisallow Inherit="False">
 				<li>AllowFresh</li>
 			</specialFiltersToDisallow>
+			<specialFiltersToAllow>
+				<li>AllowLargeCorpses</li>
+				<li>AllowCorpsesColonist</li>
+				<li>AllowRotten</li>
+				<li>AllowCorpsesStranger</li>
+			</specialFiltersToAllow>
 		</defaultIngredientFilter>
 		<researchPrerequisites Inherit="False"></researchPrerequisites>
 		<products>
