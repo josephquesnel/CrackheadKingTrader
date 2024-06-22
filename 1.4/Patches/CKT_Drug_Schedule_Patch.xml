@@ -39,18 +39,30 @@
 		<li>
 			<drug>CKT_Beer_SteelyReserve</drug>
 			<allowedForJoy>true</allowedForJoy>
+			<allowScheduled>true</allowScheduled>
+			<takeToInventory>1</takeToInventory>
+			<daysFrequency>1</daysFrequency>
 		</li>
 		<li>
 			<drug>CKT_Beer_OldEnglish</drug>
 			<allowedForJoy>true</allowedForJoy>
+			<allowScheduled>true</allowScheduled>
+			<takeToInventory>1</takeToInventory>
+			<daysFrequency>1</daysFrequency>
 		</li>
 		<li>
 			<drug>CKT_Wine_Puckfast</drug>
 			<allowedForJoy>true</allowedForJoy>
+			<allowScheduled>true</allowScheduled>
+			<takeToInventory>1</takeToInventory>
+			<daysFrequency>1</daysFrequency>
 		</li>
 		<li>
 			<drug>CKT_Wine_IrishRose</drug>
 			<allowedForJoy>true</allowedForJoy>
+			<allowScheduled>true</allowScheduled>
+			<takeToInventory>1</takeToInventory>
+			<daysFrequency>1</daysFrequency>
 		</li>
 		<li>
 			<drug>CKT_Edibles</drug>
