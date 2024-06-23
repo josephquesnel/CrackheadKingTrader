@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<RecipeDef ParentName="TSP_WW_CKT_DrugRecipe_Base">
+		<defName>TSP_CKT_Make_BadSmellJar_Corpse</defName>
+		<label>mix Bad Smell Jar using rotten corpses</label>
+		<description>What stench is so great as the stench of death? Harnass that power into a smelling salt and a gauaranteed way to infuriate one's enemies.</description>
+		<descriptionHyperlinks>
+			<ThingDef>CKT_Can_Of_Death</ThingDef>
+		</descriptionHyperlinks>
+		<jobString>sealing Portal to Hell</jobString>
+		<workAmount>300</workAmount>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<workSkill>Crafting</workSkill>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Brewing</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredients>
+			<li>
+				<filter>
+					<customSummary>rotten corpses</customSummary>
+					<categories>
+						<li>Corpses</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter Inherit="False">
+			<categories>
+				<li>Corpses</li>
+			</categories>
+			<specialFiltersToAllow>
+				<li>AllowLargeCorpses</li>
+				<li>AllowCorpsesColonist</li>
+				<li>AllowRotten</li>
+				<li>AllowCorpsesStranger</li>
+			</specialFiltersToAllow>
+			<specialFiltersToDisallow Inherit="False">
+				<li>AllowFresh</li>
+			</specialFiltersToDisallow>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter Inherit="False">
+			<categories>
+				<li>Corpses</li>
+			</categories>
+			<specialFiltersToDisallow Inherit="False">
+				<li>AllowFresh</li>
+			</specialFiltersToDisallow>
+			<specialFiltersToAllow>
+				<li>AllowLargeCorpses</li>
+				<li>AllowCorpsesColonist</li>
+				<li>AllowRotten</li>
+				<li>AllowCorpsesStranger</li>
+			</specialFiltersToAllow>
+		</defaultIngredientFilter>
+		<researchPrerequisites Inherit="False"></researchPrerequisites>
+		<products>
+			<CKT_Can_Of_Death>50</CKT_Can_Of_Death>
+		</products>
+		<recipeUsers>
+			<li>CraftingSpot</li>
+			<li MayRequire="bbbbilly.hobotoughlife">HoboBarrel</li>
+			<li MayRequire="TSP.Isengriff.Storytime">ManualGrinder</li>
+			<li MayRequire="TSP.Isengriff.Storytime">ElectricGrinder</li>
+			<li MayRequire="vanillaexpanded.recycling">VRecyclingE_RecyclingWorkbench</li>
+			<li MayRequire="vanillaexpanded.recycling">VRecyclingE_ElectricRecyclingWorkbench</li>
+		</recipeUsers>
+	</RecipeDef>
+</Defs>

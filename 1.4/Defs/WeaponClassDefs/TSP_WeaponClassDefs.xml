@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<WeaponClassDef>
+		<defName>TSP_CrackHeadKing</defName>
+		<label>Crack Head King</label>
+	</WeaponClassDef>
+</Defs>

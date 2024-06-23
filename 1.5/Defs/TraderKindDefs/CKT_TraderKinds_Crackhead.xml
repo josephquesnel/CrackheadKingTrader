@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <TraderKindDef>
+    <defName>CKT_Orbital_Crackhead_King</defName>
+    <label>Crackhead King</label>
+    <commonality>2</commonality>
+    <orbital>true</orbital>
+    <stockGenerators>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>Silver</thingDef>
+        <countRange>47060~47060</countRange>
+      </li>
+
+      <!-- Drugs -->
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Beer_SteelyReserve</thingDef>
+        <countRange>100~250</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Wine_Puckfast</thingDef>
+        <countRange>100~250</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Wine_IrishRose</thingDef>
+        <countRange>100~250</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Bottled_Water</thingDef>
+        <countRange>1000~2500</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Beer_OldEnglish</thingDef>
+        <countRange>100~250</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Baderall_Pills</thingDef>
+        <countRange>100~250</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Spray_Paint_Can</thingDef>
+        <countRange>100~250</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Can_Of_Death</thingDef>
+        <countRange>100~250</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Profen_Pill</thingDef>
+        <countRange>150~250</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Laced_Bentanal</thingDef>
+        <countRange>110~2500</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Magnesium_Pill</thingDef>
+        <countRange>1000~2500</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Edibles</thingDef>
+        <countRange>100~250</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Burned_Vape</thingDef>
+        <countRange>100~250</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Blue_Wide_Cigarettes</thingDef>
+        <countRange>150~450</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Bagged_Cigarettes</thingDef>
+        <countRange>150~450</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_8ball_Chew</thingDef>
+        <countRange>150~450</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Rimworlds_Best</thingDef>
+        <countRange>150~450</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Gamblers_Pipe_Tobacco</thingDef>
+        <countRange>150~450</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Whippet_Canister</thingDef>
+        <countRange>110~250</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Dog_Bowl</thingDef>
+        <countRange>1~2</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Chemfuel_Tank</thingDef>
+        <countRange>3~13</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_BumpBox</thingDef>
+        <countRange>3~6</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_1984_MonteCarlo</thingDef>
+        <countRange>1~3</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Terry</thingDef>
+        <countRange>1~3</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_GammaMax</thingDef>
+        <countRange>0~1</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Strange_Glowing_Thing</thingDef>
+        <countRange>0~1</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Video_Game_Neurostimulator</thingDef>
+        <countRange>0~4</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Country_Music</thingDef>
+        <countRange>0~4</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Impact_Driver</thingDef>
+        <countRange>1~12</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Copper_Pipe</thingDef>
+        <countRange>1~12</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Tape_Measure</thingDef>
+        <countRange>1~12</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Burned_Glove</thingDef>
+        <countRange>3~11</countRange>
+      </li> 
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Drill_Press_Chuck</thingDef>
+        <countRange>1~10</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Random_Junk</thingDef>
+		<countRange>5~100</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Dumbell</thingDef>
+        <countRange>10~100</countRange>
+      </li>
+	  <li Class="StockGenerator_Animals">
+        <maxWildness>0.99</maxWildness>
+        <tradeTagsSell>
+          <li>CKT_Animals</li>
+        </tradeTagsSell>
+        <tradeTagsBuy>
+			<li>CKT_Animals</li>
+			<li>AnimalCommon</li>
+			<li>AnimalUncommon</li>
+			<li>AnimalRare</li>
+			<li>AnimalExotic</li>
+			<li>AnimalInsect</li>
+			<li>AnimalFrog</li>
+			<li>AnimalFarm</li>
+			<li>AnimalPet</li>
+			<li>AnimalFighter</li>
+			<li>StorytimeAnimal</li>
+			<li>AnimalVehicle</li>
+			<li>SCP</li>
+        </tradeTagsBuy>
+        <kindCountRange>11~21</kindCountRange>
+        <countRange>3~14</countRange>
+        <createMatingPair>
+          <li>CKT_Animals</li>
+        </createMatingPair>
+      </li>
+	  <li Class="StockGenerator_Animals">
+        <maxWildness>0.9</maxWildness>
+        <tradeTagsSell>
+          <li>AnimalInsect</li>
+        </tradeTagsSell>
+        <tradeTagsBuy>
+			<li>CKT_Animals</li>
+			<li>AnimalCommon</li>
+			<li>AnimalUncommon</li>
+			<li>AnimalRare</li>
+			<li>AnimalExotic</li>
+			<li>AnimalInsect</li>
+			<li>AnimalFrog</li>
+			<li>AnimalFarm</li>
+			<li>AnimalPet</li>
+			<li>AnimalFighter</li>
+			<li>StorytimeAnimal</li>
+			<li>AnimalVehicle</li>
+			<li>SCP</li>
+        </tradeTagsBuy>
+        <kindCountRange>0~8</kindCountRange>
+        <countRange>0~14</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_EggTrogloditeUnfertilized</thingDef>
+        <countRange>500~1000</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_EggTrogloditeFertilized</thingDef>
+        <countRange>20~100</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_RedBowl</thingDef>
+        <countRange>200~500</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>CKT_Burrito</thingDef>
+        <countRange>15~300</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>ComponentIndustrial</thingDef>
+        <countRange>75~100</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>ComponentSpacer</thingDef>
+        <countRange>5~10</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>Gold</thingDef>
+        <countRange>100~1000</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef" MayRequire="zal.smokeweave">
+        <thingDef>Smokeweave</thingDef>
+		<price>Cheap</price>
+        <countRange>500~1000</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef" MayRequire="vanillaexpanded.recycling">
+        <thingDef>VRecyclingE_Trash</thingDef>
+        <countRange>1500~10000</countRange>
+		<price>Cheap</price>
+      </li>
+      <li Class="StockGenerator_SingleDef" MayRequire="ludeon.rimworld.biotech">
+        <thingDef>Wastepack</thingDef>
+        <countRange>1500~10000</countRange>
+		<price>Cheap</price>
+      </li>
+	  <li Class="StockGenerator_SingleDef" MayRequire="wasscreefted.smokeleafexpanded">
+        <thingDef>CRFT_SmokeleafTea</thingDef>
+        <countRange>75~100</countRange>
+		<price>Cheap</price>
+      </li>
+	  <li Class="StockGenerator_SingleDef" MayRequire="wasscreefted.smokeleafexpanded">
+        <thingDef>CRFT_SmokeleafBong</thingDef>
+        <countRange>5~10</countRange>
+		<price>Cheap</price>
+      </li>
+	  <li Class="StockGenerator_SingleDef" MayRequire="wasscreefted.smokeleafexpanded">
+        <thingDef>CRFT_SmokeleafBlunt</thingDef>
+        <countRange>75~100</countRange>
+		<price>Cheap</price>
+      </li>
+	  <li Class="StockGenerator_SingleDef" MayRequire="wasscreefted.smokeleafexpanded">
+        <thingDef>CRFT_SmokeleafBeer</thingDef>
+        <countRange>75~100</countRange>
+		<price>Cheap</price>
+      </li>
+	  <li Class="StockGenerator_SingleDef" MayRequire="wasscreefted.smokeleafexpanded">
+        <thingDef>CRFT_LacedJointFlake</thingDef>
+        <countRange>75~100</countRange>
+		<price>Cheap</price>
+      </li>
+	  <li Class="StockGenerator_SingleDef" MayRequire="wasscreefted.smokeleafexpanded">
+        <thingDef>CRFT_LacedJointYayo</thingDef>
+        <countRange>75~100</countRange>
+		<price>Cheap</price>
+      </li>
+	  <li Class="StockGenerator_SingleDef" MayRequire="wasscreefted.smokeleafexpanded">
+        <thingDef>CRFT_LacedJointLuciferium</thingDef>
+        <countRange>175~1000</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef" MayRequire="wasscreefted.smokeleafexpanded,oskarpotocki.vfe.insectoid">
+        <thingDef>CRFT_LacedJointRoyalInsectJelly</thingDef>
+        <countRange>175~1000</countRange>
+		<price>Cheap</price>
+      </li>
+	  <li Class="StockGenerator_SingleDef" MayRequire="wasscreefted.smokeleafexpanded">
+        <thingDef>CRFT_SmokeleafChocolate</thingDef>
+        <countRange>75~100</countRange>
+		<price>Cheap</price>
+      </li>
+	  <li Class="StockGenerator_SingleDef" MayRequire="wasscreefted.smokeleafexpanded">
+        <thingDef>CRFT_SmokeleafVape</thingDef>
+        <countRange>575~1000</countRange>
+		<price>Cheap</price>
+      </li>
+		<li Class="StockGenerator_SingleDef" MayRequire="TSP.Isengriff.Storytime">
+			<thingDef>ST_WormPizza</thingDef>
+			<countRange>20~190</countRange>
+		</li>
+		<li Class="StockGenerator_SingleDef" MayRequire="TSP.Isengriff.Storytime">
+			<thingDef>ST_Worm</thingDef>
+			<countRange>200~1900</countRange>
+		</li>
+		  <!-- Buying -->
+		  <li Class="StockGenerator_BuyExpensiveSimple"></li>
+		  <li Class="StockGenerator_BuyTradeTag"><tag>Clothing</tag></li>
+		  <li Class="StockGenerator_BuyTradeTag"><tag>BasicClothing</tag></li>
+		  <li Class="StockGenerator_BuyTradeTag"><tag>SimpleClothing</tag></li>
+		  <li Class="StockGenerator_BuyTradeTag"><tag>Art</tag></li>
+		  <li Class="StockGenerator_BuyTradeTag"><tag>Drugs</tag></li>
+		  <li Class="StockGenerator_BuyTradeTag"><tag>MusicalInstrument</tag></li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>WinkworldDrugs</tag></li>
+				<li Class="StockGenerator_BuyTradeTag">
+					<tag>GnomeFlour</tag>
+				</li>
+				<li Class="StockGenerator_BuyTradeTag">
+					<tag>Worm</tag>
+				</li>
+				<li Class="StockGenerator_BuyTradeTag">
+					<tag>WormRaw</tag>
+				</li>
+				<li Class="StockGenerator_BuyTradeTag">
+					<tag>GnomeBatta</tag>
+				</li>
+				<li Class="StockGenerator_BuyTradeTag">
+					<tag>GnomeMeat</tag>
+				</li>
+				<li Class="StockGenerator_BuyTradeTag">
+					<tag>GnomeVegetarian</tag>
+				</li>
+				<li Class="StockGenerator_BuyTradeTag">
+					<tag>GnomeBooze</tag>
+				</li>
+				<li Class="StockGenerator_BuyTradeTag" MayRequire="mo.decorationsluxury">
+					<tag MayRequire="mo.decorationsluxury">MO_Luxury</tag>
+				</li>
+				<li Class="StockGenerator_BuyTradeTag" MayRequire="sirmashedpotato.ashlands">
+					<tag MayRequire="sirmashedpotato.morrowrim.alcoholremade">DunmerBooze</tag>
+				</li>
+				<li Class="StockGenerator_BuyTradeTag">
+					<tag>ST_GnomeBooze</tag>
+				</li>
+				<li Class="StockGenerator_BuyTradeTag">
+					<tag>DunmerBooze</tag>
+				</li>
+				<li Class="StockGenerator_BuyTradeTag">
+					<tag>ST_Poison</tag>
+				</li>
+				<li Class="StockGenerator_BuyTradeTag">
+					<tag>DreadedLaced_CringeWonka_Candy</tag>
+				</li>
+				<li Class="StockGenerator_BuyTradeTag">
+					<tag>StorytimeDrugs</tag>
+				</li>
+				<li Class="StockGenerator_BuyTradeTag">
+					<tag>StorytimeBooze</tag>
+				</li>
+				<li Class="StockGenerator_BuyTradeTag">
+					<tag>EggNog</tag>
+				</li>
+    </stockGenerators>
+  </TraderKindDef>
+
+</Defs>

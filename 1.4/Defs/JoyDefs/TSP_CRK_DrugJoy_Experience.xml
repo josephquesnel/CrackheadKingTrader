@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<JoyGiverDef>
+		<defName>TSP_CKT_EatDrugsExperience</defName>
+		<giverClass>JoyGiver_Ingest</giverClass>
+		<baseChance>0</baseChance>
+		<thingDefs>
+			<li>CKT_Laced_Bentanal</li>
+			<li>CKT_Baderall_Pills</li>
+			<li>CKT_Beer_SteelyReserve</li>
+			<li>CKT_Beer_OldEnglish</li>
+			<li>CKT_Wine_Puckfast</li>
+			<li>CKT_Wine_IrishRose</li>
+			<li>CKT_Bottled_Water</li>
+			<li>CKT_Spray_Paint_Can</li>
+			<li>CKT_Profen_Pill</li>
+			<li>CKT_Magnesium_Pill</li>
+			<li>CKT_Edibles</li>
+			<li>CKT_Burned_Vape</li>
+			<li>CKT_Blue_Wide_Cigarettes</li>
+			<li>CKT_Bagged_Cigarettes</li>
+			<li>CKT_8ball_Chew</li>
+			<li>CKT_Rimworlds_Best</li>
+			<li>CKT_Gamblers_Pipe_Tobacco</li>
+			<li>CKT_Whippet_Canister</li>
+			<!-- <li>CKT_Can_Of_Death</li> -->
+		</thingDefs>
+		<!-- <jobDef>Ingest</jobDef> -->
+		<joyKind>TSP_CKT_Drugs_Classification</joyKind>
+		<requiredCapacities>
+			<li>Eating</li>
+		</requiredCapacities>
+	</JoyGiverDef>
+</Defs>

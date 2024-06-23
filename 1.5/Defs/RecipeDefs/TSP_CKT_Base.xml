@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<RecipeDef Name="TSP_WW_CKT_DrugRecipe_Base" Abstract="True">
+		<workAmount>2475</workAmount>
+		<workSpeedStat>DrugCookingSpeed</workSpeedStat>
+		<workSkill>Cooking</workSkill>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Brewing</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<unfinishedThingDef>UnfinishedPack</unfinishedThingDef>
+		<!--
+		<ingredients>
+			<li>
+				<filter>
+					<categories></categories>
+					<thingDefs></thingDefs>
+				</filter>
+				<count></count>
+			</li>
+			<li>
+				<filter>
+					<categories></categories>
+					<thingDefs></thingDefs>
+				</filter>
+				<count></count>
+			</li>
+			<li>
+				<filter>
+					<categories></categories>
+					<thingDefs></thingDefs>
+				</filter>
+				<count></count>
+			</li>
+		</ingredients>
+		-->
+		<!--
+		<fixedIngredientFilter>
+			<categories></categories>
+			<thingDefs></thingDefs>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<categories></categories>
+			<thingDefs></thingDefs>
+		</defaultIngredientFilter>
+		-->
+		<!--
+			<products></products>
+		-->
+		<recipeUsers>
+			<li>DrugLab</li>
+			<li>CraftingSpot</li>
+			<li MayRequire="bbbbilly.hobotoughlife">HoboBarrel</li>
+		</recipeUsers>
+		<researchPrerequisites></researchPrerequisites>
+	</RecipeDef>
+</Defs>

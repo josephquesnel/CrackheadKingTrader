@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<ThingCategoryDef>
+		<defName>TSP_CKT_Drugs</defName>
+		<label>crack-king drugs</label>
+		<parent>Drugs</parent>
+	</ThingCategoryDef>
+</Defs>

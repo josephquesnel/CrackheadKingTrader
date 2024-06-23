@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<RecipeDef ParentName="TSP_WW_CKT_DrugRecipe_Base">
+		<defName>TSP_CKT_Make_PaintHuff</defName>
+		<label>mix paint for inhalation</label>
+		<description>Once the knowledge to build furniture and walls is uncovered, paint becomes a natural part of the process of building. Using dyes, paint can be mixed... and, and... ohhh, it smells... so.... gooooood.......</description>
+		<descriptionHyperlinks>
+			<ThingDef>Dye</ThingDef>
+			<ThingDef>CKT_Spray_Paint_Can</ThingDef>
+			<ResearchProjectDef>ComplexFurniture</ResearchProjectDef>
+		</descriptionHyperlinks>
+		<jobString>Making paint for inhalation</jobString>
+		<workAmount>300</workAmount>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<workSkill>Crafting</workSkill>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Brewing</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredients>
+		  <li>
+			<filter>
+				<customSummary>dye</customSummary>
+			  <thingDefs>
+				<li>Dye</li>
+			  </thingDefs>
+			</filter>
+			<count>20</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter Inherit="False">
+			<thingDefs>
+				<li>Dye</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter Inherit="False">
+			<thingDefs>
+				<li>Dye</li>
+			</thingDefs>
+		</defaultIngredientFilter>
+		<researchPrerequisites Inherit="False">
+			<li>ComplexFurniture</li>
+		</researchPrerequisites>
+		<products>
+			<CKT_Spray_Paint_Can>5</CKT_Spray_Paint_Can>
+		</products>
+	</RecipeDef>
+</Defs>

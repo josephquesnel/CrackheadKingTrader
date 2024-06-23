@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+  <ThingDef ParentName="ChunkBase">
+    <defName>CKT_Drill_Press_Chuck</defName>
+    <label>drill press chuck</label>
+    <description>A cracked chuck taken from a drill press. Stolen. These devices are designed to hold drill bits and cutting tools on a spindle. While it's useless in its current form, it can be smelted to recover steel and components.</description>
+    <graphicData>
+      <texPath>Crackhead_King_Trader/Chuck</texPath>
+	  <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<tradeability>All</tradeability>
+    <statBases>
+      <Mass>2</Mass>
+	  <MarketValue>20</MarketValue>
+    </statBases>
+    <soundDrop>ChunkSlag_Drop</soundDrop>
+    <thingCategories>
+      <li>Chunks</li>
+    </thingCategories>
+    <smeltable>true</smeltable>
+    <smeltProducts>
+      <Steel>15</Steel>
+	  <ComponentIndustrial>3</ComponentIndustrial>
+    </smeltProducts>
+  </ThingDef>
+
+  <ThingDef ParentName="ChunkBase">
+    <defName>CKT_Dumbell</defName>
+    <label>dumbell</label>
+    <description>A dumbell weighing forty pounds (18.1437 kilograms). Dumbells are used for the purpose of exercising and building strength utilizing simple gravity. It can be smelted to recover steel.</description>
+    <graphicData>
+      <texPath>Crackhead_King_Trader/Dumbell</texPath>
+	  <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<tradeability>All</tradeability>
+    <statBases>
+      <Mass>18.1437</Mass>
+	  <MarketValue>30</MarketValue>
+    </statBases>
+    <soundDrop>ChunkSlag_Drop</soundDrop>
+    <thingCategories>
+      <li>Chunks</li>
+    </thingCategories>
+    <smeltable>true</smeltable>
+    <smeltProducts>
+      <Steel>40</Steel>
+    </smeltProducts>
+  </ThingDef>
+
+  <ThingDef ParentName="ChunkBase">
+    <defName>CKT_Random_Junk</defName>
+    <label>toolbox of junk</label>
+    <description>A toolbox containing many strange items. It can be smelted to recover its contents.\n\nContains: \n	Half a football (gridiron rules, cooked) \n 	Three chain links from a pair of Urb-World handcuffs \n 	Red pen (chewed) \n 	Construction screws \n 	Broken compass ("Neato Magneto" brand) \n 	Half a drawn map (yo where are we dude) \n	Three millinea-old USB-C chargers (bent) \n 	Some pocket change (silver) \n 	Shard of Plasteel (used to scratch back) \n Two torn condoms (her pleasure, extra small)</description>
+	<descriptionHyperlinks>
+		<ThingDef>ComponentIndustrial</ThingDef>
+		<ThingDef>Steel</ThingDef>
+		<ThingDef>Uranium</ThingDef>
+		<ThingDef>Plasteel</ThingDef>
+		<ThingDef>Gold</ThingDef>
+		<ThingDef>Silver</ThingDef>
+		<ThingDef>Cloth</ThingDef>
+		<ThingDef>Leather_Pig</ThingDef>
+		<ThingDef>Filth_Slime</ThingDef>
+	</descriptionHyperlinks>
+    <graphicData>
+      <texPath>Crackhead_King_Trader/Walt_Box</texPath>
+	  <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<tradeability>All</tradeability>
+    <statBases>
+      <Mass>5</Mass>
+	  <MarketValue>80</MarketValue>
+    </statBases>
+    <soundDrop>ChunkSlag_Drop</soundDrop>
+    <thingCategories>
+      <li>Chunks</li>
+    </thingCategories>
+    <smeltable>true</smeltable>
+    <smeltProducts>
+		<ComponentIndustrial>10</ComponentIndustrial>
+		<Steel>5</Steel> <!-- Neato Magneto, handcuffs, and screws -->
+		<Uranium>1</Uranium> <!-- Compass magnatism -->
+		<Plasteel>1</Plasteel> <!-- Back scratcher -->
+		<Gold>3</Gold> <!-- The chargers -->
+		<Silver>3</Silver> <!-- Spare change -->
+		<Cloth>4</Cloth> <!-- The map -->
+		<Leather_Pig>8</Leather_Pig> <!-- Half of the football (American football, obviously) -->
+		<Filth_Slime>8</Filth_Slime> <!-- Symbolizes the condoms -->
+    </smeltProducts>
+  </ThingDef>
+
+</Defs>

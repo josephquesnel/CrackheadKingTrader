@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="Melee_MetalPipe"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="CKT_Copper_Pipe"]</xpath>
+			<value>
+				<meleeHitSound MayRequire="flangopink.metalpipe">MetalPipeClangShort</meleeHitSound>
+				<soundDrop MayRequire="flangopink.metalpipe">MetalPipeClang</soundDrop>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

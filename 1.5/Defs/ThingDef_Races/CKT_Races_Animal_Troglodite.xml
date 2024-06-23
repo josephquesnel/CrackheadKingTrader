@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>CKT_Troglodite</defName>
+    <label>troglodite</label>
+    <devNote>troglodite</devNote>
+    <description>The Troglodite is a species of wren passerine. They are brownish above and somewhat paler below, with strong legs. Their short rounded wings and frequently cocked tail have a dark barred pattern. Despite appearing somewhat unkempt, they are clean and make great pets.</description>
+    <statBases>
+      <MoveSpeed>3.1</MoveSpeed>
+      <MarketValue>24</MarketValue>
+      <LeatherAmount>0</LeatherAmount>
+      <ComfyTemperatureMin>-10</ComfyTemperatureMin>
+      <FilthRate>0.5</FilthRate>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_EggLayer">
+        <eggUnfertilizedDef>CKT_EggTrogloditeUnfertilized</eggUnfertilizedDef>
+        <eggFertilizedDef>CKT_EggTrogloditeFertilized</eggFertilizedDef>
+        <eggFertilizationCountMax>1</eggFertilizationCountMax>
+        <eggLayIntervalDays>3</eggLayIntervalDays>
+        <eggCountRange>6</eggCountRange>
+      </li>
+    </comps>
+    <race>
+      <body>Bird</body>
+      <baseHungerRate>0.14</baseHungerRate>
+      <baseBodySize>0.15</baseBodySize>
+      <baseHealthScale>0.35</baseHealthScale>
+      <foodType>VegetarianRoughAnimal, Meal, Processed, Kibble</foodType>
+      <trainability>None</trainability>
+	  <useMeatFrom>Cassowary</useMeatFrom>
+      <wildness>0</wildness>
+      <roamMtbDays>7</roamMtbDays>
+      <mateMtbHours>4</mateMtbHours>
+      <lifeExpectancy>8</lifeExpectancy>
+	  <petness>0.2</petness>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBabyTiny</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_Chick_Call</soundWounded>
+          <soundDeath>Pawn_Chick_Call</soundDeath>
+          <soundCall>Pawn_Chick_Call</soundCall>
+          <soundAngry>Pawn_Chick_Call</soundAngry>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.12</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.2</minAge>
+          <soundWounded>Pawn_Chicken_Wounded</soundWounded>
+          <soundDeath>Pawn_Chicken_Death</soundDeath>
+          <soundCall>Pawn_Chicken_Call</soundCall>
+          <soundAngry>Pawn_Chicken_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+      <!--
+		<soundEating>Bird_Eat</soundEating>
+      <headPosPerRotation>
+        <li>(0.0, 0, 0.24)</li>
+        <li>(0.25, 0, 0.18)</li>
+        <li>(0.0, 0, 0.07)</li>
+        <li>(-0.25, 0, 0.18)</li>
+      </headPosPerRotation>
+	  -->
+    </race>
+    <tradeTags>
+      <li>AnimalCommon</li>
+      <li>AnimalFarm</li>
+	  <li>CKT_Animals</li>
+    </tradeTags>
+    <tools>
+      <li>
+        <label>claws</label>
+        <capacities>
+          <li>Scratch</li>
+        </capacities>
+        <power>1</power>
+        <cooldownTime>1.5</cooldownTime>
+        <linkedBodyPartsGroup>Feet</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>beak</label>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>2</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>Beak</linkedBodyPartsGroup>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>CKT_Troglodite</defName>
+    <label>troglodite</label>
+    <labelMale>troglodite cockerel</labelMale>
+    <labelFemale>troglodite hen</labelFemale>
+    <race>CKT_Troglodite</race>
+    <combatPower>10</combatPower>
+    <ecoSystemWeight>0</ecoSystemWeight>
+    <lifeStages>
+      <li>
+        <label>Troglodite chick</label>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Chicken/Chicken</texPath>
+          <drawSize>0.15</drawSize>
+          <color>(164, 108, 37)</color>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Chicken/Dessicated_Chicken</texPath>
+          <drawSize>0.15</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <labelMale>Troglodite cockerel</labelMale>
+		<labelFemale>Trglodite hen</labelFemale>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Chicken/Chicken</texPath>
+          <drawSize>0.22</drawSize>
+          <color>(143, 95, 33)</color>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/Animal/Chicken/Chicken</texPath>
+          <drawSize>0.22</drawSize>
+		  <color>(143, 120, 55)</color>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Chicken/Dessicated_Chicken</texPath>
+          <drawSize>0.21</drawSize>
+        </dessicatedBodyGraphicData>
+        <femaleDessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Chicken/Dessicated_Chicken</texPath>
+          <drawSize>0.21</drawSize>
+        </femaleDessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Chicken/Chicken</texPath>
+          <drawSize>0.31</drawSize>
+          <color>(102, 67, 23)</color>
+          <shadowData>
+            <volume>(0.3, 0.4, 0.3)</volume>
+            <offset>(0,0,-0.05)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/Animal/Chicken/Chicken</texPath>
+          <drawSize>0.31</drawSize>
+		  <color>(112, 77, 43)</color>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Chicken/Dessicated_Chicken</texPath>
+          <drawSize>0.31</drawSize>
+        </dessicatedBodyGraphicData>
+        <femaleDessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Chicken/Dessicated_Chicken</texPath>
+          <drawSize>0.31</drawSize>
+        </femaleDessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+</Defs>
