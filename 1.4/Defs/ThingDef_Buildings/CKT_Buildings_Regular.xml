@@ -39,17 +39,17 @@
     </statBases>
 	<size>(1,1)</size>
     <building>
-		<fixedStorageSettings>
-			<filter>
+		<fixedStorageSettings Inherit="False">
+			<filter Inherit="False">
 				<disallowNotEverStorable>false</disallowNotEverStorable>
 				<thingDefs>
 					<li>Kibble</li>
 				</thingDefs>
 			</filter>
 		</fixedStorageSettings>
-		<defaultStorageSettings>
+		<defaultStorageSettings Inherit="False">
 			<priority>Critical</priority>
-			<filter>
+			<filter Inherit="False">
 				<thingDefs>
 					<li>Kibble</li>
 				</thingDefs>
@@ -60,7 +60,7 @@
       <maxItemsInCell>15</maxItemsInCell>
       <blueprintClass>Blueprint_Storage</blueprintClass>
       <paintable>true</paintable>
-	  <isHopper>True</isHopper>
+	  <isHopper>true</isHopper>
     </building>
     <inspectorTabs>
       <li>ITab_Storage</li>
@@ -69,7 +69,7 @@
     <surfaceType>Item</surfaceType>
     <canOverlapZones>false</canOverlapZones>
     <comps>
-		<!-- Code courtesy of the Fridges Are Hopper Mod: https://www.steamcommunity.com/sharedfiles/filedetails/?id=2894860548 -->
+		<!-- Code courtesy of the Fridges Are Hoppers Mod: https://www.steamcommunity.com/sharedfiles/filedetails/?id=2894860548 -->
 		<li Class="CompProperties_Styleable"></li>
 		<li Class="VNPE.CompProperties_RegisterToGrinder" MayRequire="vanillaexpanded.vnutriente"></li>
     </comps>
