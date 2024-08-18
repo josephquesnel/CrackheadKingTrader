@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>    
+  <ThingDef ParentName="TSP_CKT_DrugBase">
+    <defName>CKT_Baderall_Pills</defName>
+    <label>Badderadderall</label>
+    <description>Badderadderall is a street name for amphetamine created outside of pharmaceutical laboratories. In therapeutic doses, amphetamine a synthetic stimulant designed to increase focus, treat narcolepsy, and ease the symptoms of Attention Deficit Hyperactive Disorder in humanoids. \n \n While amphetamine sees massive use across the galaxy as a legitimate medicine, Badderadderall is not used in medical settings because it is addictive, something that normal amphetamine treatments do not do. Users may find themselves heavily dependent due to the benefits to focus. \n \n As with its pharmaceutical counterpart, this amphetamine pill calms and stimulates the brain by satisfying a small amount of rest, and increases focus, allowing faster work with a small boost to learning. It also increases the Psyfocus gains from meditation. \n \n Due to its ease to make and its lack of regulation on the streets, Badderadderall in particular is commonly used on the Galactic Rim and in the poor ghettoes of Urb Worlds to improve workers' focus and acumen in more sleazy or demanding industries.</description>
+    <descriptionHyperlinks>
+      <HediffDef>CKT_BaderallHigh</HediffDef>
+      <HediffDef>CKT_BaderallAddiction</HediffDef>
+      <HediffDef>HeartAttack</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Drug/WakeUp</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+	  <color>(217, 127, 129)</color>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>900</WorkToMake>
+      <MarketValue>35</MarketValue>
+      <Mass>0.005</Mass>
+    </statBases>
+    <techLevel>Industrial</techLevel>
+    <ingestible>
+      <joyKind>TSP_CKT_Drugs_Classification</joyKind>
+      <joy>0.05</joy>
+      <drugCategory>Medical</drugCategory>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>CKT_BaderallHigh</hediffDef>
+          <severity>0.3</severity>
+          <toleranceChemical>CKT_Baderall</toleranceChemical>
+        </li>
+        <li Class="IngestionOutcomeDoer_OffsetNeed">
+          <need>Rest</need>
+          <offset>0.15</offset>
+          <toleranceChemical>CKT_Baderall</toleranceChemical>
+        </li>
+		<li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>CKT_BaderallTolerance</hediffDef>
+          <toleranceChemical>CKT_Baderall</toleranceChemical>
+          <severity>0.065</severity>
+          <divideByBodySize>true</divideByBodySize>
+          <multiplyByGeneToleranceFactors>true</multiplyByGeneToleranceFactors>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <chemical>CKT_Baderall</chemical>
+        <addictiveness>0.1</addictiveness>
+		<minToleranceToAddict>0.14</minToleranceToAddict>
+        <existingAddictionSeverityOffset>0.04</existingAddictionSeverityOffset>
+        <needLevelOffset>0.53</needLevelOffset>
+        <listOrder>211</listOrder>
+        <overdoseSeverityOffset>0~0.0311</overdoseSeverityOffset>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <HediffDef>
+    <defName>CKT_BaderallHigh</defName>
+    <label>high on amphetamine</label>
+    <labelNoun>a Badderadderall high</labelNoun>
+    <description>Active chemicals of amphetamine in the bloodstream. It calms and stimulates the brain satisfying a small amount of rest, and increases focus, allowing faster work with a small boost to learning. It also increases the psyfocus gains from meditation. This specific amphetamine stimulis comes from a dosage of Badderadderall, which is an unregulated form of amphetamine created outside of pharmaceutical laboratories.</description>
+    <hediffClass>Hediff_High</hediffClass>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.8</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+      <stages>
+        <li>
+          <capMods>
+            <li>
+              <capacity>Consciousness</capacity>
+              <offset>0.1</offset>
+            </li>
+            <li>
+              <capacity>Moving</capacity>
+              <offset>0.1</offset>
+            </li>
+          </capMods>
+          <statOffsets>
+			<GlobalLearningFactor>0.2</GlobalLearningFactor>
+            <WorkSpeedGlobal>0.15</WorkSpeedGlobal>
+            <MeditationFocusGain MayRequire="Ludeon.RimWorld.Royalty">0.2</MeditationFocusGain>
+          </statOffsets>
+          <statFactors>
+            <RestFallRateFactor>0.9</RestFallRateFactor>
+          </statFactors>
+          <hediffGivers>
+            <li Class="HediffGiver_Random">
+              <hediff>HeartAttack</hediff>
+              <mtbDays>120</mtbDays>
+              <partsToAffect>
+                <li>Heart</li>
+              </partsToAffect>
+            </li>
+          </hediffGivers>
+			<mentalStateGivers>
+			  <li>
+				<mentalState>Wander_Psychotic</mentalState>
+				<mtbDays>40</mtbDays>
+			  </li>
+			</mentalStateGivers>
+        </li>
+      </stages>
+  </HediffDef>
+  
+  <ChemicalDef>
+    <defName>CKT_Baderall</defName>
+    <label>Badderadderall</label>
+    <addictionHediff>CKT_BaderallAddiction</addictionHediff>
+    <geneOverdoseChanceFactorResist>0.5</geneOverdoseChanceFactorResist>
+    <geneOverdoseChanceFactorImmune>0</geneOverdoseChanceFactorImmune>
+  </ChemicalDef>
+  
+  <NeedDef ParentName="DrugAddictionNeedBase">
+    <defName>CKT_Chemical_Baderall</defName>
+    <needClass>Need_Chemical</needClass>
+    <label>Badderadderall</label>
+    <description>Because of a Badderadderall addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
+    <fallPerDay>0.28</fallPerDay>
+    <listPriority>41</listPriority>
+  </NeedDef>
+  
+  <HediffDef ParentName="AddictionBase">
+    <defName>CKT_BaderallAddiction</defName>
+    <label>Badderadderall addiction</label>
+    <description>Long-term presence of Badderadderall has caused neurological adaptations at the cellular level, so the brain can no longer function properly without the drug. When used as stimulants for aiding focus or aiding narcolepsy, amphetamines are almost never addictive. Badderadderall, however, is. Sadly, due to the unregulated and contaminated facilities that Badderadderall is made in, chemical addictions to the drug are well known among Urb-Worlds and the Galactic Rim.\n Without regular doses of Badderadderall, withdrawal symptoms will begin. However, extended abstinence will force the brain to adapt back to its normal state, resolving the addiction. As with all amphetamines, excess consumpstion, when taken in high doses, cause psychosis.</description>
+    <hediffClass>Hediff_Addiction</hediffClass>
+    <causesNeed>CKT_Chemical_Baderall</causesNeed>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.035</severityPerDay>
+        <showDaysToRecover>true</showDaysToRecover>
+      </li>
+    </comps>
+    <stages>
+      <li>
+      </li>
+      <li>
+        <label>withdrawal</label>
+        <socialFightChanceFactor>1.2</socialFightChanceFactor>
+        <statOffsets>
+          <RestFallRateFactor>0.3</RestFallRateFactor>
+        </statOffsets>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.20</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.1</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.10</offset>
+          </li>
+        </capMods>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Wander_Psychotic</mentalState>
+            <mtbDays>3</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <ThoughtDef>
+    <defName>TSP_CKT_Baderall_High_Thought</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>CKT_BaderallHigh</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>Badderadderall</label>
+        <description>This is so much easier to get than the lab stuff. I can memorize anything!</description>
+        <baseMoodEffect>17</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>CKT_BaderallWithdrawal</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>CKT_BaderallAddiction</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <visible>false</visible>
+      </li>
+      <li>
+        <label>Badderadderall withdrawal</label>
+        <description>I feel all fuzzy and unfocused. I'm so tired.</description>
+        <baseMoodEffect>-17</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <HediffDef ParentName="DrugToleranceBase">
+    <defName>CKT_BaderallTolerance</defName>
+    <label>Badderadderall tolerance</label>
+    <description>A built-up tolerance to Badderadderall. The more severe this tolerance is, the more Badderadderall it takes to get the same effect. As with all amphetamines, excess consumpstion, when taken in high doses, cause psychosis.</description>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.0215</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_DrugEffectFactor">
+        <chemical>CKT_Baderall</chemical>
+      </li>
+    </comps>
+	<stages Inherit="False">
+		<li>
+			<!-- <minSeverity>0</minSeverity> -->
+		</li>
+		<li>
+			<label>notable build up</label>
+			<minSeverity>0.52</minSeverity>
+			<mentalStateGivers>
+			  <li>
+				<mentalState>Wander_Psychotic</mentalState>
+				<mtbDays>4</mtbDays>
+			  </li>
+			</mentalStateGivers>
+		</li>
+	</stages>
+	<hediffGivers>
+	  <li Class="HediffGiver_RandomDrugEffect">
+		<hediff>ChemicalDamageModerate</hediff>
+		<severityToMtbDaysCurve>
+		  <points>
+			<li>(0.45, 99999)</li>
+			<li>(0.5, 180)</li>
+			<li>(1, 30)</li>
+		  </points>
+		</severityToMtbDaysCurve>
+		<partsToAffect>
+		  <li>Liver</li>
+		</partsToAffect>
+	  </li>
+	</hediffGivers>
+  </HediffDef>
+  
+</Defs>
+

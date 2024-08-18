@@ -3,22 +3,22 @@
 	<name>Crackhead King Trader</name>
 	<author>Fufulog</author>
 	<supportedVersions>
+		<li>1.4</li>
 		<li>1.5</li>
 	</supportedVersions>
 	<packageId>Fufulog.CrackheadKingTrader</packageId>
-	<description>
-Adds an Orbital Trader called the Crackhead King. Sells drugs, strange wares and burritos. AKA the loot table of your local crackhead king if he were a DND mob.
+	<description>Adds an Orbital Trader called the Crackhead King. Sells drugs, strange wares and burritos. AKA the loot table of your local crackhead king if he were a "Dungeons and Dragons" enemy.
 
-Adds a large amount of drugs:
-5 kinds of alcohol
-5 kinds of tobacco products
-2 edibles and vapes
-MANY hard drugs (some are beneficial only)
-Gloves, Shoes and Socks
-3 kinds of smeltable scraps
-2 new bionic implants
-Some rare items and buildings sold only by the trader
-Requires VFE core for apparell hediffs.
+	Adds a large amount of drugs:
+	 1. 5 kinds of alcohol
+	 2. 5 kinds of tobacco products
+	 3. 2 edibles and vapes
+	 4. MANY hard drugs (some are beneficial only)
+	 5. Gloves, Shoes and Socks
+	 6. 3 kinds of smeltable scraps
+	 7. 2 new bionic implants
+	 8. Some rare items and buildings sold only by the trader
+	 9. Requires VFE core for apparell hediffs.
 
 Items found are based entirely on this list and meme:
 https://www.youtube.com/watch?v=56boQOgekas
@@ -27,8 +27,6 @@ Source:
 https://github.com/josephquesnel/CrackheadKingTrader
 
 To do:
-Backend stuff for translations.
-
-  </description>
+Backend stuff for translations.</description>
 	<url></url>
 </ModMetaData>

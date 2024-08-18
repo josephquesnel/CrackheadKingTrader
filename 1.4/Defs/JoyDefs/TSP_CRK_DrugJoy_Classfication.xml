@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- Birds don't have boobs. -->
+<Defs>
+	<JoyKindDef>
+		<defName>TSP_CKT_GeorgeFloydRoyalFlush_Classification</defName>
+		<label>George Floyd Royal Flush consumption</label>
+	</JoyKindDef>
+	
+	<JoyKindDef>
+		<defName>TSP_CKT_Drugs_Classification</defName>
+		<label>Crack-King drugs consumption</label>
+	</JoyKindDef>
+</Defs>

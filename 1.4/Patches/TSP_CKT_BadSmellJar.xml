@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="ST_PoisonExtract"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs</xpath>
+			<value>
+				<RecipeDef ParentName="TSP_WW_CKT_DrugRecipe_Base">
+					<defName>TSP_CKT_ST_BadSmellJar_Poison</defName>
+					<label>make Bad Smell Jar from toxins</label>
+					<description>Weaken various toxins into the most putrid, foul smelling gunk imaginable.</description>
+					<descriptionHyperlinks>
+						<ThingDef>CKT_Can_Of_Death</ThingDef>
+					</descriptionHyperlinks>
+					<jobString>sealing Portal to Hell</jobString>
+					<workAmount>275</workAmount>
+					<workSpeedStat>DrugCookingSpeed</workSpeedStat>
+					<workSkill>Cooking</workSkill>
+					<effectWorking>Cook</effectWorking>
+					<soundWorking>Recipe_Brewing</soundWorking>
+					<allowMixingIngredients>true</allowMixingIngredients>
+					<ingredients>
+						<li>
+							<filter>
+								<customSummary>poison extract, toxins</customSummary>
+								<thingDefs>
+									<li>ST_PoisonExtract</li>
+									<li>ST_GoblinPoison</li>
+									<li>ST_NightFrog_Venom</li>
+								</thingDefs>
+							</filter>
+							<count>25</count>
+						</li>
+					</ingredients>
+					<fixedIngredientFilter Inherit="False">
+						<thingDefs>
+							<li>ST_PoisonExtract</li>
+							<li>ST_GoblinPoison</li>
+							<li>ST_NightFrog_Venom</li>
+						</thingDefs>
+					</fixedIngredientFilter>
+					<defaultIngredientFilter Inherit="False">
+						<thingDefs>
+							<li>ST_PoisonExtract</li>
+						</thingDefs>
+					</defaultIngredientFilter>
+					<products>
+						<CKT_Can_Of_Death>5</CKT_Can_Of_Death>
+					</products>
+					<recipeUsers>
+						<li MayRequire="TSP.Isengriff.Storytime">ManualGrinder</li>
+						<li MayRequire="TSP.Isengriff.Storytime">ElectricGrinder</li>
+						<li MayRequire="vanillaexpanded.recycling">VRecyclingE_RecyclingWorkbench</li>
+						<li MayRequire="vanillaexpanded.recycling">VRecyclingE_ElectricRecyclingWorkbench</li>
+					</recipeUsers>
+					<researchPrerequisites>
+						<li>DrugProduction</li>
+					</researchPrerequisites>
+				</RecipeDef>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="VRecyclingE_Trash"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs</xpath>
+			<value>
+				<RecipeDef ParentName="TSP_WW_CKT_DrugRecipe_Base">
+					<defName>TSP_CKT_VFERC_BadSmellJar_Trash</defName>
+					<label>make Bad Smell Jar from recycled waste</label>
+					<description>Worsen already putrid garbage into the most foul smelling gunk imaginable.</description>
+					<descriptionHyperlinks>
+						<ThingDef>CKT_Can_Of_Death</ThingDef>
+					</descriptionHyperlinks>
+					<jobString>sealing Portal to Hell</jobString>
+					<workAmount>275</workAmount>
+					<workSpeedStat>DrugCookingSpeed</workSpeedStat>
+					<workSkill>Cooking</workSkill>
+					<effectWorking>Cook</effectWorking>
+					<soundWorking>Recipe_Brewing</soundWorking>
+					<allowMixingIngredients>true</allowMixingIngredients>
+					<ingredients>
+						<li>
+							<filter>
+								<customSummary>trash, reclaimed bio-packs, reactive chem-packs, stabilized alloy packs, volatile tox-packs, radioactive isoto-packs, recycled waste</customSummary>
+								<thingDefs>
+									<li MayRequire="vanillaexpanded.recycling">VRecyclingE_Trash</li>
+									<li MayRequire="vanillaexpanded.recycling">VRecyclingE_ReclaimedBiopack</li>
+									<li MayRequire="vanillaexpanded.recycling">VRecyclingE_ReactiveChempack</li>
+									<li MayRequire="vanillaexpanded.recycling">VRecyclingE_StabilizedAlloypack</li>
+									<li MayRequire="vanillaexpanded.recycling">VRecyclingE_VolatileToxpack</li>
+									<li MayRequire="vanillaexpanded.recycling">VRecyclingE_RadioactiveIsotopack</li>
+									<li MayRequire="vanillaexpanded.recycling">VRecyclingE_TrashBrick</li>
+								</thingDefs>
+							</filter>
+							<count>10</count>
+						</li>
+					</ingredients>
+					<fixedIngredientFilter Inherit="False">
+						<thingDefs>
+							<li MayRequire="vanillaexpanded.recycling">VRecyclingE_Trash</li>
+							<li MayRequire="vanillaexpanded.recycling">VRecyclingE_ReclaimedBiopack</li>
+							<li MayRequire="vanillaexpanded.recycling">VRecyclingE_ReactiveChempack</li>
+							<li MayRequire="vanillaexpanded.recycling">VRecyclingE_StabilizedAlloypack</li>
+							<li MayRequire="vanillaexpanded.recycling">VRecyclingE_VolatileToxpack</li>
+							<li MayRequire="vanillaexpanded.recycling">VRecyclingE_RadioactiveIsotopack</li>
+							<li MayRequire="vanillaexpanded.recycling">VRecyclingE_TrashBrick</li>
+						</thingDefs>
+					</fixedIngredientFilter>
+					<defaultIngredientFilter Inherit="False">
+						<thingDefs>
+							<li MayRequire="vanillaexpanded.recycling">VRecyclingE_Trash</li>
+						</thingDefs>
+					</defaultIngredientFilter>
+					<products>
+						<CKT_Can_Of_Death>12</CKT_Can_Of_Death>
+					</products>
+					<recipeUsers>
+						<li MayRequire="vanillaexpanded.recycling">VRecyclingE_RecyclingWorkbench</li>
+						<li MayRequire="vanillaexpanded.recycling">VRecyclingE_ElectricRecyclingWorkbench</li>
+						<li MayRequire="TSP.Isengriff.Storytime">ManualGrinder</li>
+					</recipeUsers>
+					<researchPrerequisites Inherit="False">
+						<li MayRequire="vanillaexpanded.recycling">VRecyclingE_BasicRecycling</li>
+					</researchPrerequisites>
+				</RecipeDef>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="Wastepack"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs</xpath>
+			<value>
+				<RecipeDef ParentName="TSP_WW_CKT_DrugRecipe_Base" MayRequire="ludeon.rimworld.biotech">
+					<defName>TSP_CKT_Make_BadSmellJar_ToxicWastePack</defName>
+					<label>mix Bad Smell Jar using toxic weaste</label>
+					<description>Toxic Waste Packs are for amateurs. Let's get FILTHY. Transforming Toxic Waste Packs is an incredible, slow-moving feat that takes a stupidly long time to do, but it is one of the only effective ways to actually make use of the stuff.</description>
+					<descriptionHyperlinks>
+						<ThingDef>CKT_Can_Of_Death</ThingDef>
+						<ThingDef MayRequire="ludeon.rimworld.biotech">Wastepack</ThingDef>
+					</descriptionHyperlinks>
+					<jobString>sealing the Portal to Hell</jobString>
+					<workAmount>12366</workAmount>
+					<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+					<workSkill>Crafting</workSkill>
+					<effectWorking>Cook</effectWorking>
+					<soundWorking>Recipe_Brewing</soundWorking>
+					<allowMixingIngredients>true</allowMixingIngredients>
+					<ingredients MayRequire="ludeon.rimworld.biotech">
+						<li>
+							<filter>
+								<customSummary>toxic waste packs</customSummary>
+								<thingDefs>
+									<li MayRequire="ludeon.rimworld.biotech">Wastepack</li>
+								</thingDefs>
+							</filter>
+							<count>20</count>
+						</li>
+					</ingredients>
+					<fixedIngredientFilter Inherit="False" MayRequire="ludeon.rimworld.biotech">
+						<thingDefs MayRequire="ludeon.rimworld.biotech">
+							<li MayRequire="ludeon.rimworld.biotech">Wastepack</li>
+						</thingDefs>
+					</fixedIngredientFilter>
+					<defaultIngredientFilter Inherit="False" MayRequire="ludeon.rimworld.biotech">
+						<thingDefs>
+							<li MayRequire="ludeon.rimworld.biotech">Wastepack</li>
+						</thingDefs>
+					</defaultIngredientFilter>
+					<products>
+						<CKT_Can_Of_Death>50</CKT_Can_Of_Death>
+					</products>
+					<recipeUsers MayRequire="ludeon.rimworld.biotech" Inherit="False">
+						<li>CraftingSpot</li>
+						<li>ElectricSmelter</li>
+						<li>TableMachining</li>
+						<li MayRequire="vanillaexpanded.recycling">VRecyclingE_RecyclingWorkbench</li>
+						<li MayRequire="vanillaexpanded.recycling">VRecyclingE_ElectricRecyclingWorkbench</li>
+						<li MayRequire="bbbbilly.hobotoughlife">HoboBarrel</li>
+						<li MayRequire="TSP.Isengriff.Storytime">ManualGrinder</li>
+						<li MayRequire="TSP.Isengriff.Storytime">ElectricGrinder</li>
+					</recipeUsers>
+					<researchPrerequisites Inherit="False" MayRequire="ludeon.rimworld.biotech">
+						<li MayRequire="vanillaexpanded.recycling">VRecyclingE_BasicRecycling</li>
+						<li>ToxGas</li>
+					</researchPrerequisites>
+				</RecipeDef>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>
